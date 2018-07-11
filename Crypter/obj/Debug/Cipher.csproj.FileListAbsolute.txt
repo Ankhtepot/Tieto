@@ -1,0 +1,15 @@
+C:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\bin\Debug\Crypter.exe.config
+C:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\bin\Debug\Crypter.exe
+C:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\bin\Debug\Crypter.pdb
+C:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\obj\Debug\Cipher.csprojResolveAssemblyReference.cache
+C:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\obj\Debug\Cipherator.FrMain.resources
+C:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\obj\Debug\Crypter.Properties.Resources.resources
+C:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\obj\Debug\Cipher.csproj.GenerateResource.cache
+C:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\obj\Debug\Cipher.csproj.CoreCompileInputs.cache
+C:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\obj\Debug\Cipher.csproj.CopyComplete
+C:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\obj\Debug\Crypter.exe
+C:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\obj\Debug\Crypter.pdb
+C:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\bin\Debug\Classes.dll
+C:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\bin\Debug\Classes.pdb
+C:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\bin\Debug\Controls.dll
+C:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\bin\Debug\Controls.pdb
