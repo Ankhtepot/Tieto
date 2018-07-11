@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 //Class with App settings
-namespace Controls {
+namespace Controls { //App options storage
     public static class AppOptions {
         private static ICipher cryptingMethod;
         private static int keyValue;

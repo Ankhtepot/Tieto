@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Classes
-{
+{ //base class for crypting methods
     public abstract class CipherBase : ICipher
     {
         private String name;
@@ -17,8 +17,5 @@ namespace Classes
         public abstract string DeCipher(string code);
         public abstract string Cipher(string text);
 
-        public void Dispose() {
-            
-        }
     }
 }

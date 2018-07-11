@@ -16,7 +16,6 @@ namespace Classes {
             String result = "";
             for (int i = 0; i < text.Length; i++) {
                 result += cipherChar(text[i]);
-                Console.WriteLine("result:" + result);
             }
             return result;
         }
@@ -25,7 +24,6 @@ namespace Classes {
             String result = "";
             for (int i = 0; i < code.Length; i++) {
                 result += deCipherChar(code[i]);
-                Console.WriteLine("result:" + result);
             }
             return result;
         }
@@ -38,12 +36,12 @@ namespace Classes {
             } else
             if (Char.IsLetter(input)) {
                 bool inputIsUpper = false;
-                if (Char.IsUpper(input)) {
+                if (Char.IsUpper(input)) { //buffer for to store flag if char is upperCase
                     input = Char.ToLower(input);
                     inputIsUpper = true;
                 }
                 int moveTo = input + KeyValue;
-                while (moveTo > 122) {
+                while (moveTo > 122) { //to ensure right overfloating of letter ANSII
                     moveTo = 97 + (moveTo - 123);
                 }
                 result = (char)moveTo;
@@ -57,22 +55,18 @@ namespace Classes {
             if (Char.IsDigit(input)) {
                 int number = (int)Char.GetNumericValue(input);
                 int keyValue = KeyValue % 10;
-                //Console.WriteLine("Converted number: {0}, KeyValue = {1}, number-KeyValue = {2}, 10-(number-KeyValue) = {3}", number, keyValue, number - keyValue, 10 + (number - keyValue));
                 number = number >= keyValue ? number - keyValue : 10 + (number - keyValue);
-                //Console.WriteLine("Returning number: {0}",number);
                 return Char.Parse(number.ToString());
             } else
                 if (Char.IsLetter(input)) {
                 bool inputIsUpper = false;
-                if (Char.IsUpper(input)) {
+                if (Char.IsUpper(input)) { //buffer for to store flag if char is upperCase
                     input = Char.ToLower(input);
                     inputIsUpper = true;
                 }
                 int moveTo = input - KeyValue;
-                Console.WriteLine("Input - KeyValue: {0}",moveTo);
-                while (moveTo < 97) {
+                while (moveTo < 97) { //to ensure right overfloating of letter ANSII
                     moveTo += 26 ;
-                    Console.WriteLine("Changing moveTo to: {0}",moveTo);
                 }
                 result = (char)moveTo;
                 if (inputIsUpper) result = Char.ToUpper(result);

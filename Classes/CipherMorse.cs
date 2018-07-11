@@ -4,56 +4,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Classes
-
-{
-    public class CipherMorse : CipherBase
-    {
-        public CipherMorse()
-        {
+namespace Classes {
+    public class CipherMorse : CipherBase {
+        public CipherMorse() {
             Name = "Morse";
             HasKey = false;
         }
 
-        public override string Cipher(string text)
-        {
+        public override string Cipher(string text) {
             string result = "";
-            for (int i = 0; i <= (text.Length - 1); i++)
-            {
-                bool znakNalezen = false;
-                for (int d = 0; d <= codeTable.GetUpperBound(0); d++)
-                {
-                    if (text[i].ToString() == (codeTable[d, 0]) || text[i].ToString() == (codeTable[d, 1]))
-                    {
+            for (int i = 0; i < text.Length; i++) {
+                bool symbolFound = false;
+                for (int d = 0; d <= codeTable.GetUpperBound(0); d++) {
+                    if (text[i].ToString() == (codeTable[d, 0]) || text[i].ToString() == (codeTable[d, 1])) {
                         result += codeTable[d, 2] + "/";
-                        znakNalezen = true;
+                        symbolFound = true;
                     }
                 }
-                if (znakNalezen == false) result += "@/";
+                if (symbolFound == false) result += "@/";
             }
             return result;
         }
-
-        public override string DeCipher(string code)
-        {
+        
+        public override string DeCipher(string code) {
             string result = "";
-            string bufferSlovo = "";
-            for (int i = 0; i <= ((code.Length) - 1); i++)
-            {
-                if (code[i] == '/')
-                {
-                    for (int d = 0; d <= codeTable.GetUpperBound(0); d++)
-                    {
-                        if (bufferSlovo == codeTable[d, 2])
-                        {
+            string bufferWord = "";
+            for (int i = 0; i < code.Length; i++) {
+                if (code[i] == '/') {
+                    for (int d = 0; d <= codeTable.GetUpperBound(0); d++) {
+                        if (bufferWord == codeTable[d, 2]) {
                             result += codeTable[d, 0];
-                            bufferSlovo = "";
-
-                        }
-                        else { }
+                            bufferWord = "";
+                        } else { }
                     }
-                }
-                else if (code[i] == '.' || code[i] == '-' || code[i] == ' ') bufferSlovo += code[i];
+                } else if (code[i] == '.' || code[i] == '-' || code[i] == ' ') bufferWord += code[i];
             }
             return result;
         }

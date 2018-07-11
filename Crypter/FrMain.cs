@@ -19,14 +19,14 @@ namespace Cipherator
 
             //AppOptions default setting
             SetAppOptionsCryptingMethod(1);
-            AppOptions.KeyValue = 1;
 
+            //settings of controlls
             RbMorse.Checked = true;
 
             //Methods for controlls
             BuCipher.Click += BuCipher_Click;
             BuDecipher.Click += BuDecipher_Click;
-            BuExit.Click += new EventHandler(BuExit_Click);
+            BuExit.Click += BuExit_Click;
             RbMorse.Click += RbMorse_Click;
             RbCaesar.Click += RbCaesar_Click;
             NudKey.ValueChanged += NudKey_ValueChanged;
@@ -34,13 +34,9 @@ namespace Cipherator
             BuToInput.Click += BuToInput_Click;
         }
 
+        //placeholder controlls methods
         private void BuToInput_Click(object sender, EventArgs e) {
             MoveResultToInput();
-        }
-
-        private void MoveResultToInput() {
-            TbInput.Text = TbResult.Text;
-            TbResult.Text = "";
         }
 
         private void BuReset_Click(object sender, EventArgs e) {
@@ -72,6 +68,7 @@ namespace Cipherator
             Cipher(true);
         }
 
+        //executive methods
         private void Cipher(Boolean cipherDirection) {
             TbResult.Text =  Ctrls.Transform(TbInput.Text,cipherDirection);
         }
@@ -95,6 +92,11 @@ namespace Cipherator
 
         private void ResetTBs() {
             TbInput.Text = "";
+            TbResult.Text = "";
+        }
+
+        private void MoveResultToInput() {
+            TbInput.Text = TbResult.Text;
             TbResult.Text = "";
         }
 

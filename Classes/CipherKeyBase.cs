@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Classes {
+namespace Classes { //base class for crypting methods with keyValue
     public abstract class CipherKeyBase : CipherBase {
         private int keyMinConstraint;
         private int keyMaxConstraint;
@@ -13,8 +13,7 @@ namespace Classes {
         public CipherKeyBase(int keyMin, int keyMax, int keyVal) {
             this.KeyMinConstraint = keyMin;
             this.KeyMaxConstraint = keyMax;
-            this.KeyValue = keyVal;
-            Console.WriteLine("CipherKeyBase.KeyValue=",this.KeyValue);
+            this.keyValue = keyVal;
         }
 
         public int KeyMinConstraint { get => keyMinConstraint; set => keyMinConstraint = value; }
