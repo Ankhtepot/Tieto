@@ -45,6 +45,7 @@
     <Compile Include="CipherKeyBase.cs" />
     <Compile Include="CipherMorse.cs" />
     <Compile Include="ICipher.cs" />
+    <Compile Include="MorseTab.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

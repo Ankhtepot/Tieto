@@ -8,7 +8,7 @@ namespace Classes
 {   //Interface to ensure crypting classes can serve theyr purpose
     public interface ICipher 
     {
-        String Cipher(String text);
-        String DeCipher(String code);
+        string Cipher(string text);
+        string DeCipher(string code);
     }
 }

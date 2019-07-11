@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 namespace Classes {
     public class CipherCaesar : CipherKeyBase {
 
+        private const char PLACEHOLDER_SIGN = '@';
+
         public CipherCaesar(int keyValue) : base(1, 26, keyValue) {
             this.Name = "Caesar";
             this.HasKey = true;
@@ -14,54 +16,65 @@ namespace Classes {
 
         public override string Cipher(string text) {
             String result = "";
+
             for (int i = 0; i < text.Length; i++) {
                 result += cipherChar(text[i]);
             }
+
             return result;
         }
 
         public override string DeCipher(string code) {
             String result = "";
+
             for (int i = 0; i < code.Length; i++) {
                 result += deCipherChar(code[i]);
             }
+
             return result;
         }
 
         private char cipherChar(char input) {
             char result = ' ';
-            if (Char.IsDigit(input)) {
+
+            if (char.IsDigit(input)) {
                 int postModuloInc = (KeyValue + int.Parse(input.ToString())) % 10;
-                result = Char.Parse(postModuloInc.ToString());
+                return char.Parse(postModuloInc.ToString());
             } else
-            if (Char.IsLetter(input)) {
+            if (char.IsLetter(input)) {
                 bool inputIsUpper = false;
-                if (Char.IsUpper(input)) { //buffer for to store flag if char is upperCase
-                    input = Char.ToLower(input);
+
+                if (char.IsUpper(input)) { //buffer for to store flag if char is upperCase
+                    input = char.ToLower(input);
                     inputIsUpper = true;
                 }
+
                 int moveTo = input + KeyValue;
+
                 while (moveTo > 122) { //to ensure right overfloating of letter ANSII
                     moveTo = 97 + (moveTo - 123);
                 }
-                result = (char)moveTo;
-                if (inputIsUpper) result = Char.ToUpper(result);
-            } else return '@';
-            return result;
+
+                if (inputIsUpper)
+                    return char.ToUpper((char)moveTo);
+
+                return (char)moveTo;
+            } else return PLACEHOLDER_SIGN;
         }
 
-        private Char deCipherChar(char input) {
+        private char deCipherChar(char input) {
             char result = ' ';
-            if (Char.IsDigit(input)) {
-                int number = (int)Char.GetNumericValue(input);
+
+            if (char.IsDigit(input)) {
+                int number = (int)char.GetNumericValue(input);
                 int keyValue = KeyValue % 10;
                 number = number >= keyValue ? number - keyValue : 10 + (number - keyValue);
-                return Char.Parse(number.ToString());
+                return char.Parse(number.ToString());
             } else
-                if (Char.IsLetter(input)) {
+                if (char.IsLetter(input)) {
                 bool inputIsUpper = false;
-                if (Char.IsUpper(input)) { //buffer for to store flag if char is upperCase
-                    input = Char.ToLower(input);
+                if (char.IsUpper(input)) { //buffer for to store flag if char is upperCase
+                    input = char.ToLower(input);
                     inputIsUpper = true;
                 }
                 int moveTo = input - KeyValue;
@@ -69,9 +82,9 @@ namespace Classes {
                     moveTo += 26 ;
                 }
                 result = (char)moveTo;
-                if (inputIsUpper) result = Char.ToUpper(result);
+                if (inputIsUpper) result = char.ToUpper(result);
                 return result;
-            } else return '@';
+            } else return PLACEHOLDER_SIGN;
             
         }
     }

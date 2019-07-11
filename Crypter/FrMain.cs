@@ -60,8 +60,12 @@ namespace Cipherator
         }
 
         private void BuExit_Click(object sender, EventArgs e) {
-            if (Ctrls.ExitCheck()) Application.Exit();
-            else MessageBox.Show("Cant exit right now");
+            if (Ctrls.ExitCheck()) {
+                Application.Exit();
+            }
+            else {
+                MessageBox.Show("Cant exit right now");
+            }
         }
 
         private void BuCipher_Click(object o, EventArgs e) {
@@ -75,7 +79,7 @@ namespace Cipherator
 
         private void SetAppOptionsCryptingMethod(int newValue) {
             Ctrls.SetAppOptionsCryptingMethod(newValue);
-            if (Ctrls.KeyCryptingMethod()) {
+            if (Ctrls.IsCryptingMethodWithKey()) {
                 LbKey.Text = AppOptions.LbKeyText;
                 NudKey.Visible = AppOptions.NudKeyVisible;
                 NudKey.Minimum = AppOptions.NudKeyMinimum;
@@ -87,7 +91,7 @@ namespace Cipherator
         }
 
         private void SetKeyValue(int value) {
-            Ctrls.SetKeyValue(value);
+            Ctrls.SetValueOfKey(value);
         }
 
         private void ResetTBs() {

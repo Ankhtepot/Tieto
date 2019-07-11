@@ -5,3 +5,9 @@ C:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Classes\obj\Debug\
 C:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Classes\obj\Debug\Classes.pdb
 C:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Classes\bin\Debug\Classes.dll.CodeAnalysisLog.xml
 C:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Classes\bin\Debug\Classes.dll.lastcodeanalysissucceeded
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Classes\bin\Debug\Classes.dll
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Classes\bin\Debug\Classes.pdb
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Classes\obj\Debug\Classes.csprojAssemblyReference.cache
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Classes\obj\Debug\Classes.csproj.CoreCompileInputs.cache
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Classes\obj\Debug\Classes.dll
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Classes\obj\Debug\Classes.pdb

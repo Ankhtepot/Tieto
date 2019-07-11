@@ -8,13 +8,12 @@ namespace Classes
 { //base class for crypting methods
     public abstract class CipherBase : ICipher
     {
-        private String name;
-        private Boolean hasKey;        
+        public string Name { get; set; }
 
-        public string Name { get => name; set => name = value; }
-        public bool HasKey { get => hasKey; set => hasKey = value; }
+        public bool HasKey { get; set; }
 
         public abstract string DeCipher(string code);
+
         public abstract string Cipher(string text);
 
     }

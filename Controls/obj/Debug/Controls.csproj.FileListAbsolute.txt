@@ -7,3 +7,12 @@ C:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Controls\obj\Debug
 C:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Controls\obj\Debug\Controls.csproj.CopyComplete
 C:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Controls\obj\Debug\Controls.dll
 C:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Controls\obj\Debug\Controls.pdb
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Controls\bin\Debug\Controls.dll
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Controls\bin\Debug\Controls.pdb
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Controls\bin\Debug\Classes.dll
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Controls\bin\Debug\Classes.pdb
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Controls\obj\Debug\Controls.csprojAssemblyReference.cache
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Controls\obj\Debug\Controls.csproj.CoreCompileInputs.cache
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Controls\obj\Debug\Controls.csproj.CopyComplete
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Controls\obj\Debug\Controls.dll
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Controls\obj\Debug\Controls.pdb
