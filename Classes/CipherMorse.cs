@@ -1,28 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace Classes {
-    public class CipherMorse : CipherBase {
+namespace Classes
+{
+    public class CipherMorse : CipherBase
+    {
 
         private string[,] codeTable = MorseTab.codeTable;
 
         private const string LINE_ENDING = "@/";
 
-        public CipherMorse() {
+        public CipherMorse()
+        {
             Name = "Morse";
             HasKey = false;
         }
 
-        public override string Cipher(string text) {
+        public override string Cipher(string text)
+        {
             string result = "";
-            for (int i = 0; i < text.Length; i++) {
+
+            for (int i = 0; i < text.Length; i++)
+            {
                 bool symbolFound = false;
 
-                for (int d = 0; d <= codeTable.GetUpperBound(0); d++) {
-                    if (text[i].ToString() == (codeTable[d, 0]) || text[i].ToString() == (codeTable[d, 1])) {
+                for (int d = 0; d <= codeTable.GetUpperBound(0); d++)
+                {
+                    if (text[i].ToString() == (codeTable[d, 0]) || text[i].ToString() == (codeTable[d, 1]))
+                    {
                         result += codeTable[d, 2] + "/";
                         symbolFound = true;
                     }
@@ -33,25 +37,30 @@ namespace Classes {
 
             return result;
         }
-        
-        public override string DeCipher(string code) {
+
+        public override string DeCipher(string code)
+        {
             string result = "";
             string bufferWord = "";
             List<char> exludedChars = new List<char>() { '.', '-', ' ' };
-            
-            for (int i = 0; i < code.Length; i++) {
-                if (code[i] == '/') {
-                    for (int d = 0; d <= codeTable.GetUpperBound(0); d++) {
-                        if (bufferWord == codeTable[d, 2]) {
+
+            for (int i = 0; i < code.Length; i++)
+            {
+                if (code[i] == '/')
+                {
+                    for (int d = 0; d <= codeTable.GetUpperBound(0); d++)
+                    {
+                        if (bufferWord == codeTable[d, 2])
+                        {
                             result += codeTable[d, 0];
                             bufferWord = "";
-                        } else { }
+                        }
+                        else { }
                     }
-                } else if (exludedChars.Contains(code[i])) bufferWord += code[i];
+                }
+                else if (exludedChars.Contains(code[i])) bufferWord += code[i];
             }
             return result;
         }
-
-        
     }
 }

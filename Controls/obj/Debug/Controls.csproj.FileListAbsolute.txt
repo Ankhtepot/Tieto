@@ -16,3 +16,13 @@ D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Controls\obj\Debug
 D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Controls\obj\Debug\Controls.csproj.CopyComplete
 D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Controls\obj\Debug\Controls.dll
 D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Controls\obj\Debug\Controls.pdb
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Controls\bin\Debug\xunit.abstractions.dll
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Controls\bin\Debug\xunit.runner.visualstudio.testadapter.dll
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Controls\bin\Debug\xunit.runner.reporters.net452.dll
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Controls\bin\Debug\xunit.runner.utility.net452.dll
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Controls\bin\Debug\xunit.assert.dll
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Controls\bin\Debug\xunit.core.dll
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Controls\bin\Debug\xunit.execution.desktop.dll
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Controls\bin\Debug\xunit.assert.xml
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Controls\bin\Debug\xunit.core.xml
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Controls\bin\Debug\xunit.execution.desktop.xml

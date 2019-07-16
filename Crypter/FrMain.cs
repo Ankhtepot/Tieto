@@ -1,12 +1,5 @@
 ﻿using Controls;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Cipherator
@@ -35,71 +28,90 @@ namespace Cipherator
         }
 
         //placeholder controlls methods
-        private void BuToInput_Click(object sender, EventArgs e) {
+        private void BuToInput_Click(object sender, EventArgs e)
+        {
             MoveResultToInput();
         }
 
-        private void BuReset_Click(object sender, EventArgs e) {
+        private void BuReset_Click(object sender, EventArgs e)
+        {
             ResetTBs();
         }
 
-        private void NudKey_ValueChanged(object sender, EventArgs e) {
+        private void NudKey_ValueChanged(object sender, EventArgs e)
+        {
             SetKeyValue((int)NudKey.Value);
         }
 
-        private void RbCaesar_Click(object sender, EventArgs e) {
+        private void RbCaesar_Click(object sender, EventArgs e)
+        {
             SetAppOptionsCryptingMethod(2);
         }
 
-        private void RbMorse_Click(object sender, EventArgs e) {
+        private void RbMorse_Click(object sender, EventArgs e)
+        {
             SetAppOptionsCryptingMethod(1);
         }
 
-        private void BuDecipher_Click(object sender, EventArgs e) {
+        private void BuDecipher_Click(object sender, EventArgs e)
+        {
             Cipher(false);
         }
 
-        private void BuExit_Click(object sender, EventArgs e) {
-            if (Ctrls.ExitCheck()) {
+        private void BuExit_Click(object sender, EventArgs e)
+        {
+            if (Ctrls.ExitCheck())
+            {
                 Application.Exit();
             }
-            else {
+            else
+            {
                 MessageBox.Show("Cant exit right now");
             }
         }
 
-        private void BuCipher_Click(object o, EventArgs e) {
+        private void BuCipher_Click(object o, EventArgs e)
+        {
             Cipher(true);
         }
 
         //executive methods
-        private void Cipher(Boolean cipherDirection) {
-            TbResult.Text =  Ctrls.Transform(TbInput.Text,cipherDirection);
+        private void Cipher(Boolean cipherDirection)
+        {
+            TbResult.Text = Ctrls.Transform(TbInput.Text, cipherDirection);
         }
 
-        private void SetAppOptionsCryptingMethod(int newValue) {
+        private void SetAppOptionsCryptingMethod(int newValue)
+        {
             Ctrls.SetAppOptionsCryptingMethod(newValue);
-            if (Ctrls.IsCryptingMethodWithKey()) {
+            if (Ctrls.IsCryptingMethodWithKey())
+            {
                 LbKey.Text = AppOptions.LbKeyText;
+                NudKey.Value = AppOptions.KeyValue;
                 NudKey.Visible = AppOptions.NudKeyVisible;
                 NudKey.Minimum = AppOptions.NudKeyMinimum;
                 NudKey.Maximum = AppOptions.NudKeyMaximum;
-            } else {
+            }
+            else
+            {
                 LbKey.Text = AppOptions.LbKeyText;
                 NudKey.Visible = false;
             }
         }
 
-        private void SetKeyValue(int value) {
-            Ctrls.SetValueOfKey(value);
+        private void SetKeyValue(int value)
+        {
+            AppOptions.KeyValue = value;
         }
 
-        private void ResetTBs() {
+        private void ResetTBs()
+        {
             TbInput.Text = "";
             TbResult.Text = "";
         }
 
-        private void MoveResultToInput() {
+        private void MoveResultToInput()
+        {
             TbInput.Text = TbResult.Text;
             TbResult.Text = "";
         }

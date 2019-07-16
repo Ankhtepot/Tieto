@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Classes { //base class for crypting methods with keyValue
-    public abstract class CipherKeyBase : CipherBase {
+﻿namespace Classes
+{ //base class for crypting methods with keyValue
+    public abstract class CipherKeyBase : CipherBase
+    {
         private int keyMinConstraint;
         private int keyMaxConstraint;
         private int keyValue;
 
-        public CipherKeyBase(int keyMin, int keyMax, int keyVal) {
+        public CipherKeyBase(int keyMin, int keyMax, int keyVal)
+        {
             this.KeyMinConstraint = keyMin;
             this.KeyMaxConstraint = keyMax;
             this.keyValue = keyVal;
