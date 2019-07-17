@@ -2,8 +2,8 @@
 { //base class for crypting methods with keyValue
     public abstract class CipherKeyBase : CipherBase
     {
-        private int keyMinConstraint;
-        private int keyMaxConstraint;
+        public int KeyMinConstraint { get; set; }
+        public int KeyMaxConstraint { get; set; }
         private int keyValue;
 
         public CipherKeyBase(int keyMin, int keyMax, int keyVal)
@@ -13,8 +13,7 @@
             this.keyValue = keyVal;
         }
 
-        public int KeyMinConstraint { get => keyMinConstraint; set => keyMinConstraint = value; }
-        public int KeyMaxConstraint { get => keyMaxConstraint; set => keyMaxConstraint = value; }
+        
         public virtual int KeyValue {
             get => keyValue;
             set {

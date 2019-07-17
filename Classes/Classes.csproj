@@ -60,6 +60,7 @@
     <Compile Include="CipherCaesar.cs" />
     <Compile Include="CipherKeyBase.cs" />
     <Compile Include="CipherMorse.cs" />
+    <Compile Include="CipherTestInstances.cs" />
     <Compile Include="ICipher.cs" />
     <Compile Include="MorseTab.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

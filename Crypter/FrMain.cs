@@ -83,7 +83,8 @@ namespace Cipherator
 
         private void SetAppOptionsCryptingMethod(int newValue)
         {
-            Ctrls.SetAppOptionsCryptingMethod(newValue);
+            Ctrls.SetAppOptionsCryptingMethod(Ctrls.GetCipher(newValue));
+
             if (Ctrls.IsCryptingMethodWithKey())
             {
                 LbKey.Text = AppOptions.LbKeyText;

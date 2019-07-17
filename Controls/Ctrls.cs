@@ -5,6 +5,8 @@ namespace Controls
 {
     public static class Ctrls
     {
+        public const string CIPHER_WITH_KEY_LABEL_PREFIX = " method Key value ";
+        public const string CIPHER_WITHOUT_KEY_LABEL_PREFIX = " method is not using crypting key value.";
         //method to cipher/decipher
         public static string Transform(string input, bool cipherDirection) =>
              cipherDirection ? AppOptions.CryptingMethod.Cipher(input) : AppOptions.CryptingMethod.DeCipher(input);
@@ -17,26 +19,21 @@ namespace Controls
         }
 
         //sets AppOptions when crypting method changes
-        public static void SetAppOptionsCryptingMethod(int newValue)
+        public static void SetAppOptionsCryptingMethod(CipherBase cipher)
         {
-            ICipher checkMethod = GetCipher(newValue);
 
-            if (checkMethod != null)
-            {
-                AppOptions.CryptingMethod = checkMethod;
-            }
-            else
-            {
+            if (cipher == null)
+            { 
                 MessageBox.Show("Setting the crypting method failed");
                 return;
             }
 
-            if (((CipherBase)AppOptions.CryptingMethod).HasKey)
+            AppOptions.CryptingMethod = cipher;
+            AppOptions.LbKeyText = buildLbKeyText(AppOptions.CryptingMethod);
+
+            if (AppOptions.CryptingMethod.HasKey)
             {
                 CipherKeyBase keyCipherMethod = (CipherKeyBase)AppOptions.CryptingMethod;
-                AppOptions.LbKeyText = string.Format($"{keyCipherMethod.Name}" +
-                    $" method Key value ({keyCipherMethod.KeyMinConstraint}" +
-                    $" - {keyCipherMethod.KeyMaxConstraint}):");
                 AppOptions.NudKeyVisible = true;
                 AppOptions.NudKeyMinimum = keyCipherMethod.KeyMinConstraint;
                 AppOptions.NudKeyMaximum = keyCipherMethod.KeyMaxConstraint;
@@ -44,13 +41,12 @@ namespace Controls
             }
             else
             {
-                AppOptions.LbKeyText = string.Format($"{((CipherBase)AppOptions.CryptingMethod).Name} method is not using crypting key value");
                 AppOptions.NudKeyVisible = false;
             }
         }
 
         //for getting cipher method
-        public static ICipher GetCipher(int methodSelection)
+        public static CipherBase GetCipher(int methodSelection)
         {
             switch (methodSelection)
             {
@@ -63,6 +59,13 @@ namespace Controls
         //Serves as check if chosen crypting method supports keyValue
         public static bool IsCryptingMethodWithKey() =>
             ((CipherBase)AppOptions.CryptingMethod).HasKey ? true : false;
+
+        public static string buildLbKeyText(CipherBase cipher)
+        {
+            return string.Format($"{cipher.Name}" +
+                    (cipher.HasKey ? CIPHER_WITH_KEY_LABEL_PREFIX + $"({((CipherKeyBase)cipher).KeyMinConstraint}" + $" - {((CipherKeyBase)cipher).KeyMaxConstraint})" 
+                                   : CIPHER_WITHOUT_KEY_LABEL_PREFIX));
+        }
     }
 }
 

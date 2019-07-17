@@ -115,6 +115,10 @@
     <None Include="Resources\crypt17x24.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Classes\Classes.csproj">
+      <Project>{B55CDCC6-115B-4208-8DC2-A84B51CE3ED3}</Project>
+      <Name>Classes</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Controls\Controls.csproj">
       <Project>{287c3875-e015-447a-83c0-b4064d2ab3aa}</Project>
       <Name>Controls</Name>
