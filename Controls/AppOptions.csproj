@@ -6,11 +6,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B55CDCC6-115B-4208-8DC2-A84B51CE3ED3}</ProjectGuid>
+    <ProjectGuid>{287C3875-E015-447A-83C0-B4064D2AB3AA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Classes</RootNamespace>
-    <AssemblyName>Classes</AssemblyName>
+    <RootNamespace>Controls</RootNamespace>
+    <AssemblyName>Controls</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -36,6 +36,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,14 +57,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CipherBase.cs" />
-    <Compile Include="CipherCaesar.cs" />
-    <Compile Include="CipherKeyBase.cs" />
-    <Compile Include="CipherMorse.cs" />
-    <Compile Include="CipherTestInstances.cs" />
-    <Compile Include="ICipher.cs" />
-    <Compile Include="MorseTab.cs" />
+    <Compile Include="Options.cs" />
+    <Compile Include="OptionsService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="test\OptionsServiceTest.cs" />
+    <Compile Include="test\CipherTestInstances.cs" />
+    <Compile Include="test\OptionsTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Classes\CryptingMethods.csproj">
+      <Project>{B55CDCC6-115B-4208-8DC2-A84B51CE3ED3}</Project>
+      <Name>CryptingMethods</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

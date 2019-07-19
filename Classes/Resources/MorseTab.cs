@@ -1,4 +1,4 @@
-﻿namespace Classes
+﻿namespace Cipher
 {
     public class MorseTab
     {

@@ -1,8 +1,9 @@
-﻿using Classes;
+﻿using Cipher;
+using System;
 //Class with App settings
-namespace Controls
+namespace AppOptions
 { //App options storage
-    public static class AppOptions
+    public static class Options
     {
         public static CipherBase CryptingMethod { get; set; }
         public static string LbKeyText { get; set; }
@@ -15,10 +16,16 @@ namespace Controls
             get => keyValue;
             set 
             {
-                if (CryptingMethod is CipherKeyBase)
+                if (CryptingMethod is CipherKeyBase 
+                    && value >= ((CipherKeyBase)CryptingMethod).KeyMinConstraint
+                    && value <= ((CipherKeyBase)CryptingMethod).KeyMaxConstraint)
                 {
                     ((CipherKeyBase)CryptingMethod).KeyValue = value;
                     keyValue = value;
+                }
+                else
+                {
+                    keyValue = 0;
                 }
             }
         }

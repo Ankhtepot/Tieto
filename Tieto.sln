@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cipher", "Crypter\Cipher.csproj", "{72D24620-51F9-4EDE-BFD2-F722951FA6EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classes", "Classes\Classes.csproj", "{B55CDCC6-115B-4208-8DC2-A84B51CE3ED3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptingMethods", "Classes\CryptingMethods.csproj", "{B55CDCC6-115B-4208-8DC2-A84B51CE3ED3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controls", "Controls\Controls.csproj", "{287C3875-E015-447A-83C0-B4064D2AB3AA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppOptions", "Controls\AppOptions.csproj", "{287C3875-E015-447A-83C0-B4064D2AB3AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

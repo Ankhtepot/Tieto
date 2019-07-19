@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Cipher;
 
-namespace Classes
+namespace Tests
 {
     public class CipherTestInstances
     {
@@ -12,15 +8,17 @@ namespace Classes
         public const string TEST_DECIPHER_WITH_KEY = "TestCipherWithKey - decipher";
         public const string TEST_CIPHER_WITHOUT_KEY = "TestCipherWithoutKey - cipher";
         public const string TEST_DECIPHER_WITHOUT_KEY = "TestCipherWithoutKey - decipher";
-        public const int TEST_MINKEY = 1;
-        public const int TEST_MAXKEY = 26;
+        public const int TEST_MIN_KEY = 1;
+        public const int TEST_MAX_KEY = 26;
         public const int TEST_KEY_VALUE = 5;
-        public class TestCipherWithKey : CipherKeyBase
+
+        public static CipherBase cipherWithoutKey = new TestCipherWithoutKey();
+        public static CipherKeyBase cipherWithKey = new TestCipherWithKey(TEST_KEY_VALUE);
+        private class TestCipherWithKey : CipherKeyBase
         {
-            public TestCipherWithKey(int keyValue) : base(TEST_MINKEY, TEST_MAXKEY, keyValue)
+            public TestCipherWithKey(int keyValue) : base(TEST_MIN_KEY, TEST_MAX_KEY, keyValue)
             {
                 this.Name = "TestCipherWithKey";
-                this.HasKey = true;
             }
             public override string Cipher(string text)
             {
@@ -31,14 +29,18 @@ namespace Classes
             {
                 return TEST_DECIPHER_WITH_KEY;
             }
+
+            public override bool IsKeyBasedCipher()
+            {
+                return true;
+            }
         }
 
-        public class TestCipherWithoutKey : CipherBase
+        private class TestCipherWithoutKey : CipherBase
         {
             public TestCipherWithoutKey() 
             {
                 this.Name = "TestCipherWithoutKey";
-                this.HasKey = true;
             }
             public override string Cipher(string text)
             {
@@ -48,6 +50,11 @@ namespace Classes
             public override string DeCipher(string code)
             {
                 return TEST_DECIPHER_WITHOUT_KEY;
+            }
+
+            public override bool IsKeyBasedCipher()
+            {
+                return false;
             }
         }
     }

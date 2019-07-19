@@ -6,11 +6,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{287C3875-E015-447A-83C0-B4064D2AB3AA}</ProjectGuid>
+    <ProjectGuid>{B55CDCC6-115B-4208-8DC2-A84B51CE3ED3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Controls</RootNamespace>
-    <AssemblyName>Controls</AssemblyName>
+    <RootNamespace>Classes</RootNamespace>
+    <AssemblyName>Classes</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -36,7 +36,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,16 +56,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppOptions.cs" />
-    <Compile Include="Ctrls.cs" />
+    <Compile Include="Base\CipherBase.cs" />
+    <Compile Include="Impl\CipherCaesar.cs" />
+    <Compile Include="Base\CipherKeyBase.cs" />
+    <Compile Include="Impl\CipherMorse.cs" />
+    <Compile Include="Base\ICipher.cs" />
+    <Compile Include="Resources\MorseTab.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="test\CtrlsTest.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Classes\Classes.csproj">
-      <Project>{B55CDCC6-115B-4208-8DC2-A84B51CE3ED3}</Project>
-      <Name>Classes</Name>
-    </ProjectReference>
+    <Compile Include="test\CipherKeyBaseTest.cs" />
+    <Compile Include="test\CipherTestInstances.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Classes
+namespace Cipher
 {
     public class CipherCaesar : CipherKeyBase
     {
@@ -9,8 +9,7 @@ namespace Classes
 
         public CipherCaesar(int keyValue) : base(1, 26, keyValue)
         {
-            this.Name = "Caesar";
-            this.HasKey = true;
+            Name = "Caesar";
         }
 
         public override string Cipher(string text)
@@ -35,6 +34,11 @@ namespace Classes
             }
 
             return result;
+        }
+
+        public override bool IsKeyBasedCipher()
+        {
+            return true;
         }
 
         private char cipherChar(char input)

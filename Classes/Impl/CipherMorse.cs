@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Classes
+namespace Cipher
 {
     public class CipherMorse : CipherBase
     {
@@ -12,7 +12,6 @@ namespace Classes
         public CipherMorse()
         {
             Name = "Morse";
-            HasKey = false;
         }
 
         public override string Cipher(string text)
@@ -61,6 +60,11 @@ namespace Classes
                 else if (exludedChars.Contains(code[i])) bufferWord += code[i];
             }
             return result;
+        }
+
+        public override bool IsKeyBasedCipher()
+        {
+            return false;
         }
     }
 }

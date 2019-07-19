@@ -1,4 +1,4 @@
-﻿using Controls;
+﻿using AppOptions;
 using System;
 using System.Windows.Forms;
 
@@ -60,7 +60,7 @@ namespace Cipherator
 
         private void BuExit_Click(object sender, EventArgs e)
         {
-            if (Ctrls.ExitCheck())
+            if (OptionsService.ExitCheck())
             {
                 Application.Exit();
             }
@@ -78,31 +78,31 @@ namespace Cipherator
         //executive methods
         private void Cipher(Boolean cipherDirection)
         {
-            TbResult.Text = Ctrls.Transform(TbInput.Text, cipherDirection);
+            TbResult.Text = OptionsService.CipherExecute(TbInput.Text, cipherDirection);
         }
 
         private void SetAppOptionsCryptingMethod(int newValue)
         {
-            Ctrls.SetAppOptionsCryptingMethod(Ctrls.GetCipher(newValue));
+            OptionsService.SetOptions(OptionsService.GetCipher(newValue));
 
-            if (Ctrls.IsCryptingMethodWithKey())
+            if (OptionsService.IsCryptingMethodWithKey())
             {
-                LbKey.Text = AppOptions.LbKeyText;
-                NudKey.Value = AppOptions.KeyValue;
-                NudKey.Visible = AppOptions.NudKeyVisible;
-                NudKey.Minimum = AppOptions.NudKeyMinimum;
-                NudKey.Maximum = AppOptions.NudKeyMaximum;
+                LbKey.Text = Options.LbKeyText;
+                NudKey.Value = Options.KeyValue;
+                NudKey.Visible = Options.NudKeyVisible;
+                NudKey.Minimum = Options.NudKeyMinimum;
+                NudKey.Maximum = Options.NudKeyMaximum;
             }
             else
             {
-                LbKey.Text = AppOptions.LbKeyText;
+                LbKey.Text = Options.LbKeyText;
                 NudKey.Visible = false;
             }
         }
 
         private void SetKeyValue(int value)
         {
-            AppOptions.KeyValue = value;
+            Options.KeyValue = value;
         }
 
         private void ResetTBs()
