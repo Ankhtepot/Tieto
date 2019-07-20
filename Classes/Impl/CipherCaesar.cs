@@ -6,10 +6,17 @@ namespace Cipher
     {
 
         private const char PLACEHOLDER_SIGN = '@';
+        private const int MIN_KEY = 1;
+        private const int MAX_KEY = 26;
 
-        public CipherCaesar(int keyValue) : base(1, 26, keyValue)
+        private CipherCaesar(int keyValue) : base(MIN_KEY, MAX_KEY, keyValue)
         {
             Name = "Caesar";
+        }
+
+        public static CipherCaesar Create(int keyValue)
+        {
+            return new CipherCaesar(keyValue);
         }
 
         public override string Cipher(string text)

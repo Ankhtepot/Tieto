@@ -53,8 +53,8 @@ namespace AppOptions
         {
             switch (methodSelection)
             {
-                case 1: return new CipherMorse();
-                case 2: return new CipherCaesar(Options.KeyValue > 0 ? Options.KeyValue : 1);
+                case 1: return CipherMorse.Create();
+                case 2: return CipherCaesar.Create(Options.KeyValue > 0 ? Options.KeyValue : 1);
                 default: return null;
             }
         }

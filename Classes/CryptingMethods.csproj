@@ -9,8 +9,8 @@
     <ProjectGuid>{B55CDCC6-115B-4208-8DC2-A84B51CE3ED3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Classes</RootNamespace>
-    <AssemblyName>Classes</AssemblyName>
+    <RootNamespace>CryptingMethods</RootNamespace>
+    <AssemblyName>CryptingMethods</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -34,8 +34,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,18 +60,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base\CipherBase.cs" />
+    <Compile Include="Abstracts\CipherBase.cs" />
     <Compile Include="Impl\CipherCaesar.cs" />
-    <Compile Include="Base\CipherKeyBase.cs" />
+    <Compile Include="Abstracts\CipherKeyBase.cs" />
     <Compile Include="Impl\CipherMorse.cs" />
-    <Compile Include="Base\ICipher.cs" />
+    <Compile Include="Abstracts\ICipher.cs" />
+    <Compile Include="Resources\JSONToMorseTabParser.cs" />
     <Compile Include="Resources\MorseTab.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="test\CipherCaesarTest.cs" />
     <Compile Include="test\CipherKeyBaseTest.cs" />
+    <Compile Include="test\CipherMorseTest.cs" />
     <Compile Include="test\CipherTestInstances.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Resources\Morse.json" />
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\xunit.analyzers.0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll" />

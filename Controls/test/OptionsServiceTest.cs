@@ -21,7 +21,7 @@ namespace Tests
         }
 
         [Fact]
-        public void testSetAppOptionsCryptingMethod_cryptingMethodWithKey()
+        public void testSetOptions_cryptingMethodWithKey()
         {
             CipherKeyBase testCipher = CipherTestInstances.cipherWithKey;
 
@@ -39,7 +39,7 @@ namespace Tests
         }
 
         [Fact]
-        public void testSetAppOptionsCryptingMethod_cryptingMethodWithoutKey()
+        public void testSetOptions_cryptingMethodWithoutKey()
         {
             CipherBase testCipher =  CipherTestInstances.cipherWithoutKey;
 
@@ -47,12 +47,12 @@ namespace Tests
 
             Assert.Equal(Options.CryptingMethod, testCipher);
             Assert.Equal(Options.LbKeyText, testCipher.Name + OptionsService.CIPHER_WITHOUT_KEY_LABEL_PREFIX);
-            OptionsService.SetOptions(testCipher);
+            OptionsService.SetOptions(testCipher); // TODO find out why is not changing CipherMethod after first SetOptions
             Assert.False(Options.CryptingMethod.IsKeyBasedCipher());
         }
 
         [Fact]
-        public void testSetAppOptionsCryptingMethod_withNullMethod()
+        public void testSetOptions_withNullMethod()
         {
             Assert.False(OptionsService.SetOptions(null));
         }

@@ -1,17 +1,37 @@
-﻿using System.Collections.Generic;
+﻿using Classes.Resources;
+using System.Collections.Generic;
 
 namespace Cipher
 {
     public class CipherMorse : CipherBase
     {
 
-        private string[,] codeTable = MorseTab.codeTable;
+        private static string[,] codeTable; // = MorseTab.codeTable;
 
         private const string LINE_ENDING = "@/";
 
-        public CipherMorse()
+        private const string BASE_MORSE_JSON_TAB_FULL_PATH = "./Morse.json";
+
+        private CipherMorse(string morseTableFullPath = "")
         {
             Name = "Morse";
+
+            if (morseTableFullPath == "")
+            {
+                morseTableFullPath = BASE_MORSE_JSON_TAB_FULL_PATH;
+            }
+
+            loadMorseTableFromJSON(morseTableFullPath);
+        }
+
+        public static CipherMorse Create(string morseTabFullPath = "")
+        {
+            return new CipherMorse(morseTabFullPath);
+        }
+
+        private void loadMorseTableFromJSON(string fileFullPath)
+        {
+            codeTable = JSONToMorseTabParser.getMorseTabFromJSON(fileFullPath);
         }
 
         public override string Cipher(string text)

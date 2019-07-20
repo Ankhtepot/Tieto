@@ -16,9 +16,9 @@
         public virtual int KeyValue {
             get => keyValue;
             set {
-                if (value >= this.KeyMinConstraint && value <= this.KeyMaxConstraint) keyValue = value;
-                else if (value <= this.KeyMinConstraint) keyValue = this.KeyMinConstraint;
-                else if (value >= this.KeyMaxConstraint) keyValue = this.KeyMaxConstraint;
+                if (value >= KeyMinConstraint && value <= KeyMaxConstraint) keyValue = value;
+                else if (value <= KeyMinConstraint) keyValue = KeyMinConstraint;
+                else if (value >= KeyMaxConstraint) keyValue = KeyMaxConstraint;
             }
         }
 

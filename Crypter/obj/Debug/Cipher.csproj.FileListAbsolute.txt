@@ -17,9 +17,7 @@ D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\bin\Debug\
 D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\bin\Debug\Crypter.exe
 D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\bin\Debug\Crypter.pdb
 D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\bin\Debug\Controls.dll
-D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\bin\Debug\Classes.dll
 D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\bin\Debug\Controls.pdb
-D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\bin\Debug\Classes.pdb
 D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\obj\Debug\Cipher.csprojAssemblyReference.cache
 D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\obj\Debug\Cipherator.FrMain.resources
 D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\obj\Debug\Crypter.Properties.Resources.resources
@@ -38,3 +36,7 @@ D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\bin\Debug\
 D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\bin\Debug\xunit.assert.xml
 D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\bin\Debug\xunit.core.xml
 D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\bin\Debug\xunit.execution.desktop.xml
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\bin\Debug\Newtonsoft.Json.dll
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\bin\Debug\Newtonsoft.Json.xml
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\bin\Debug\CryptingMethods.dll
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\Crypter\bin\Debug\CryptingMethods.pdb

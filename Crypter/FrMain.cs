@@ -1,4 +1,5 @@
 ﻿using AppOptions;
+using Classes.Resources;
 using System;
 using System.Windows.Forms;
 
@@ -117,5 +118,9 @@ namespace Cipherator
             TbResult.Text = "";
         }
 
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            string[,] testLoad = JSONToMorseTabParser.getMorseTabFromJSON("D:/Users/Petr/Documents/Visual Studio 2017/repos - docs/Tieto/Classes/Resources/Morse.json");
+        }
     }
 }

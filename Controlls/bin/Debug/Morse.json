@@ -1,0 +1,242 @@
+[
+  {
+    "capitalChar": "A",
+    "lowerCaseChar": "a",
+    "morseForm": ".-"
+  },
+  {
+    "capitalChar": "B",
+    "lowerCaseChar": "b",
+    "morseForm": "-..."
+  },
+  {
+    "capitalChar": "C",
+    "lowerCaseChar": "c",
+    "morseForm": "-.-."
+  },
+  {
+    "capitalChar": "D",
+    "lowerCaseChar": "d",
+    "morseForm": "-.."
+  },
+  {
+    "capitalChar": "E",
+    "lowerCaseChar": "e",
+    "morseForm": "."
+  },
+  {
+    "capitalChar": "F",
+    "lowerCaseChar": "f",
+    "morseForm": "..-."
+  },
+  {
+    "capitalChar": "G",
+    "lowerCaseChar": "g",
+    "morseForm": "--."
+  },
+  {
+    "capitalChar": "H",
+    "lowerCaseChar": "h",
+    "morseForm": "...."
+  },
+  {
+    "capitalChar": "CH",
+    "lowerCaseChar": "ch",
+    "morseForm": "----"
+  },
+  {
+    "capitalChar": "I",
+    "lowerCaseChar": "i",
+    "morseForm": ".."
+  },
+  {
+    "capitalChar": "J",
+    "lowerCaseChar": "j",
+    "morseForm": ".---"
+  },
+  {
+    "capitalChar": "K",
+    "lowerCaseChar": "k",
+    "morseForm": "-.-"
+  },
+  {
+    "capitalChar": "L",
+    "lowerCaseChar": "l",
+    "morseForm": ".-.."
+  },
+  {
+    "capitalChar": "M",
+    "lowerCaseChar": "m",
+    "morseForm": "--"
+  },
+  {
+    "capitalChar": "N",
+    "lowerCaseChar": "n",
+    "morseForm": "-."
+  },
+  {
+    "capitalChar": "O",
+    "lowerCaseChar": "o",
+    "morseForm": "---"
+  },
+  {
+    "capitalChar": "P",
+    "lowerCaseChar": "p",
+    "morseForm": ".--."
+  },
+  {
+    "capitalChar": "Q",
+    "lowerCaseChar": "q",
+    "morseForm": "--.-"
+  },
+  {
+    "capitalChar": "R",
+    "lowerCaseChar": "r",
+    "morseForm": ".-."
+  },
+  {
+    "capitalChar": "S",
+    "lowerCaseChar": "s",
+    "morseForm": "..."
+  },
+  {
+    "capitalChar": "T",
+    "lowerCaseChar": "t",
+    "morseForm": "-"
+  },
+  {
+    "capitalChar": "U",
+    "lowerCaseChar": "u",
+    "morseForm": "..-"
+  },
+  {
+    "capitalChar": "V",
+    "lowerCaseChar": "v",
+    "morseForm": "...-"
+  },
+  {
+    "capitalChar": "W",
+    "lowerCaseChar": "w",
+    "morseForm": ".--"
+  },
+  {
+    "capitalChar": "X",
+    "lowerCaseChar": "x",
+    "morseForm": "-..-"
+  },
+  {
+    "capitalChar": "Y",
+    "lowerCaseChar": "y",
+    "morseForm": "-.--"
+  },
+  {
+    "capitalChar": "Z",
+    "lowerCaseChar": "z",
+    "morseForm": "--.."
+  },
+  {
+    "capitalChar": "Ä",
+    "lowerCaseChar": "ä",
+    "morseForm": ".-.-"
+  },
+  {
+    "capitalChar": "Ö",
+    "lowerCaseChar": "ö",
+    "morseForm": "---."
+  },
+  {
+    "capitalChar": "Ü",
+    "lowerCaseChar": "ü",
+    "morseForm": "..--"
+  },
+  {
+    "capitalChar": "1",
+    "lowerCaseChar": "1",
+    "morseForm": ".----"
+  },
+  {
+    "capitalChar": "2",
+    "lowerCaseChar": "2",
+    "morseForm": "..---"
+  },
+  {
+    "capitalChar": "3",
+    "lowerCaseChar": "3",
+    "morseForm": "...--"
+  },
+  {
+    "capitalChar": "4",
+    "lowerCaseChar": "4",
+    "morseForm": "....-"
+  },
+  {
+    "capitalChar": "5",
+    "lowerCaseChar": "5",
+    "morseForm": "....."
+  },
+  {
+    "capitalChar": "6",
+    "lowerCaseChar": "6",
+    "morseForm": "-...."
+  },
+  {
+    "capitalChar": "7",
+    "lowerCaseChar": "7",
+    "morseForm": "--..."
+  },
+  {
+    "capitalChar": "8",
+    "lowerCaseChar": "8",
+    "morseForm": "---.."
+  },
+  {
+    "capitalChar": "9",
+    "lowerCaseChar": "9",
+    "morseForm": "----."
+  },
+  {
+    "capitalChar": "0",
+    "lowerCaseChar": "0",
+    "morseForm": "-----"
+  },
+  {
+    "capitalChar": ".",
+    "lowerCaseChar": ".",
+    "morseForm": ".-.-.-"
+  },
+  {
+    "capitalChar": ",",
+    "lowerCaseChar": ",",
+    "morseForm": "--..--"
+  },
+  {
+    "capitalChar": "?",
+    "lowerCaseChar": "?",
+    "morseForm": "..--.."
+  },
+  {
+    "capitalChar": "!",
+    "lowerCaseChar": "!",
+    "morseForm": "..--."
+  },
+  {
+    "capitalChar": "\"",
+    "lowerCaseChar": "\"",
+    "morseForm": ".-..-."
+  },
+  {
+    "capitalChar": "'",
+    "lowerCaseChar": "'",
+    "morseForm": ".----."
+  },
+  {
+    "capitalChar": "=",
+    "lowerCaseChar": "=",
+    "morseForm": "-...-"
+  },
+  {
+    "capitalChar": " ",
+    "lowerCaseChar": " ",
+    "morseForm": " "
+  }
+]

@@ -202,7 +202,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 303);
+            this.ClientSize = new System.Drawing.Size(300, 302);
             this.Controls.Add(this.BuToInput);
             this.Controls.Add(this.BuReset);
             this.Controls.Add(this.LbKey);

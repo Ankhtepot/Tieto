@@ -13,10 +13,13 @@ namespace Tests
         public const int TEST_KEY_VALUE = 5;
 
         public static CipherBase cipherWithoutKey = new TestCipherWithoutKey();
-        public static CipherKeyBase cipherWithKey = new TestCipherWithKey(TEST_KEY_VALUE);
-        private class TestCipherWithKey : CipherKeyBase
+        public static CipherKeyBase cipherWithKey = new TestCipherWithKey(
+                                                            TEST_MIN_KEY,
+                                                            TEST_MAX_KEY,
+                                                            TEST_KEY_VALUE);
+        public class TestCipherWithKey : CipherKeyBase
         {
-            public TestCipherWithKey(int keyValue) : base(TEST_MIN_KEY, TEST_MAX_KEY, keyValue)
+            public TestCipherWithKey(int minKey, int maxKey, int keyValue) : base(minKey, maxKey, keyValue)
             {
                 this.Name = "TestCipherWithKey";
             }
@@ -36,7 +39,7 @@ namespace Tests
             }
         }
 
-        private class TestCipherWithoutKey : CipherBase
+        public class TestCipherWithoutKey : CipherBase
         {
             public TestCipherWithoutKey() 
             {
