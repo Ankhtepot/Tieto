@@ -55,29 +55,29 @@ namespace AppOptions
             string assemblyName = System.Reflection.Assembly.GetExecutingAssembly().FullName;
 
             List<Type> cipherTypes = new List<Type> {
-                GetType("Cipher.CipherMorse"), GetType("Cipher.CipherCaesar") };
+                GetType("CryptingMethods.CipherMorse"), GetType("CryptingMethods.CipherCaesar") };
 
             List<CipherBase> cipherInstances = new List<CipherBase>();
 
             Type keyCipher = typeof(CipherKeyBase);
 
-            //foreach (var cipherType in cipherTypes)
-            //{
-            //    if(cipherType.IsSubclassOf(keyCipher))
-            //    {
-            //        var instance = cipherType.GetMethod("Create").Invoke(cipherType, new object[] { 1 });
-            //        cipherInstances.Add((CipherKeyBase)instance);
-            //    }
-            //    else
-            //    {
-            //        cipherInstances.Add((CipherBase)cipherType.GetMethod("Create").Invoke(cipherType, new object[] { "" }));
-            //    }
-            //}
+            foreach (var cipherType in cipherTypes)
+            {
+                if (cipherType.IsSubclassOf(keyCipher))
+                {
+                    var instance = cipherType.GetMethod("Create").Invoke(cipherType, new object[] { 1 });
+                    cipherInstances.Add((CipherKeyBase)instance);
+                }
+                else
+                {
+                    cipherInstances.Add((CipherBase)cipherType.GetMethod("Create").Invoke(cipherType, new object[] { "" }));
+                }
+            }
 
             switch (methodSelection)
             {
-                case 1: return CipherMorse.Create();
-                case 2: return CipherCaesar.Create(Options.KeyValue > 0 ? Options.KeyValue : 1);
+                case 0: return CipherMorse.Create();
+                case 1: return CipherCaesar.Create(Options.KeyValue > 0 ? Options.KeyValue : 1);
                 default: return null;
             }
         }

@@ -12,7 +12,7 @@ namespace Cipherator
             InitializeComponent();
 
             //AppOptions default setting
-            SetAppOptionsCryptingMethod(1);
+            SetAppOptionsCryptingMethod(0);
 
             //settings of controlls
             RbMorse.Checked = true;
@@ -21,8 +21,8 @@ namespace Cipherator
             BuCipher.Click += BuCipher_Click;
             BuDecipher.Click += BuDecipher_Click;
             BuExit.Click += BuExit_Click;
-            RbMorse.Click += RbMorse_Click;
-            RbCaesar.Click += RbCaesar_Click;
+            RbMorse.Click += RbMethodClick;
+            RbCaesar.Click += RbMethodClick;
             NudKey.ValueChanged += NudKey_ValueChanged;
             BuReset.Click += BuReset_Click;
             BuToInput.Click += BuToInput_Click;
@@ -46,12 +46,20 @@ namespace Cipherator
 
         private void RbCaesar_Click(object sender, EventArgs e)
         {
-            SetAppOptionsCryptingMethod(2);
+            string extractedTag = ((sender as RadioButton).Tag).ToString();
+            SetAppOptionsCryptingMethod(int.TryParse(extractedTag, out int returnInt) ? int.Parse(extractedTag) : 0 );
         }
 
         private void RbMorse_Click(object sender, EventArgs e)
         {
-            SetAppOptionsCryptingMethod(1);
+            string extractedTag = ((sender as RadioButton).Tag).ToString();
+            SetAppOptionsCryptingMethod(int.TryParse(extractedTag, out int returnInt) ? int.Parse(extractedTag) : 0);
+        }
+
+        private void RbMethodClick(object sender, EventArgs e)
+        {
+            string extractedTag = ((sender as RadioButton).Tag).ToString();
+            SetAppOptionsCryptingMethod(int.TryParse(extractedTag, out int returnInt) ? int.Parse(extractedTag) : 0);
         }
 
         private void BuDecipher_Click(object sender, EventArgs e) => Cipher(false);

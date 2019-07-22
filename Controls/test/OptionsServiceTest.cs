@@ -6,8 +6,8 @@ namespace AppOptions.Tests
 {
     public class OptionsServiceTest
     {
-        private const int MORSE_ID = 1;
-        private const int CAESAR_ID = 2;
+        private const int MORSE_ID = 0;
+        private const int CAESAR_ID = 1;
 
         [Fact]
         public void testExitCheck()
