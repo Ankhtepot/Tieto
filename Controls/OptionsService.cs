@@ -1,4 +1,6 @@
-﻿using Cipher;
+﻿using CryptingMethods;
+using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace AppOptions
@@ -22,7 +24,6 @@ namespace AppOptions
         //sets AppOptions when crypting method changes
         public static bool SetOptions(CipherBase cipher)
         {
-
             if (cipher == null)
             { 
                 MessageBox.Show("Setting the crypting method failed");
@@ -51,6 +52,28 @@ namespace AppOptions
         //for getting cipher method
         public static CipherBase GetCipher(int methodSelection)
         {
+            string assemblyName = System.Reflection.Assembly.GetExecutingAssembly().FullName;
+
+            List<Type> cipherTypes = new List<Type> {
+                GetType("Cipher.CipherMorse"), GetType("Cipher.CipherCaesar") };
+
+            List<CipherBase> cipherInstances = new List<CipherBase>();
+
+            Type keyCipher = typeof(CipherKeyBase);
+
+            //foreach (var cipherType in cipherTypes)
+            //{
+            //    if(cipherType.IsSubclassOf(keyCipher))
+            //    {
+            //        var instance = cipherType.GetMethod("Create").Invoke(cipherType, new object[] { 1 });
+            //        cipherInstances.Add((CipherKeyBase)instance);
+            //    }
+            //    else
+            //    {
+            //        cipherInstances.Add((CipherBase)cipherType.GetMethod("Create").Invoke(cipherType, new object[] { "" }));
+            //    }
+            //}
+
             switch (methodSelection)
             {
                 case 1: return CipherMorse.Create();
@@ -69,6 +92,25 @@ namespace AppOptions
                     (cipher.IsKeyBasedCipher() ? CIPHER_WITH_KEY_LABEL_PREFIX + $"({((CipherKeyBase)cipher).KeyMinConstraint}" + $" - {((CipherKeyBase)cipher).KeyMaxConstraint})" 
                                    : CIPHER_WITHOUT_KEY_LABEL_PREFIX));
         }
+
+        //source: Sarath Avanavu/StackOverflow
+        public static Type GetType(string strFullyQualifiedName)
+        {
+            Type type = Type.GetType(strFullyQualifiedName);
+            //if (type != null)
+            //    return Activator.CreateInstance(type);
+            foreach (var asm in AppDomain.CurrentDomain.GetAssemblies())
+            {
+                type = asm.GetType(strFullyQualifiedName);
+                if (type != null)
+                    return type;
+                        //type == typeof(CipherKeyBase) ? (CipherKeyBase)Activator.CreateInstance(type) 
+                        //: (CipherBase)Activator.CreateInstance(type);
+            }
+            return null;
+        }
+
+
     }
 }
 

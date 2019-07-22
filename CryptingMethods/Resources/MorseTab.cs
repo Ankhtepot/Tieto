@@ -1,4 +1,4 @@
-﻿namespace Cipher
+﻿namespace CryptingMethods
 {
     public class MorseTab
     {

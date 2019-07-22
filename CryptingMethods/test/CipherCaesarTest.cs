@@ -1,4 +1,4 @@
-﻿using Cipher;
+﻿using CryptingMethods;
 using Xunit;
 
 namespace Tests

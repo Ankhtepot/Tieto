@@ -1,13 +1,8 @@
 ﻿using AppOptions;
-using Cipher;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CryptingMethods;
 using Xunit;
 
-namespace Tests
+namespace AppOptions.Tests
 {
     public class OptionsServiceTest
     {

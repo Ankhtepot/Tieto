@@ -1,9 +1,4 @@
-﻿using Cipher;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CryptingMethods;
 using Xunit;
 
 namespace Tests
@@ -13,7 +8,10 @@ namespace Tests
         [Fact]
         public void CipherKeyBaseConstructorTest()
         {
-            CipherKeyBase testCipher = CipherTestInstances.cipherWithKey;
+            CipherKeyBase testCipher = new CipherTestInstances.TestCipherWithKey(
+                CipherTestInstances.TEST_MIN_KEY,
+                CipherTestInstances.TEST_MAX_KEY,
+                CipherTestInstances.TEST_KEY_VALUE);
 
             Assert.Equal(CipherTestInstances.TEST_MIN_KEY, testCipher.KeyMinConstraint);
             Assert.Equal(CipherTestInstances.TEST_MAX_KEY, testCipher.KeyMaxConstraint);

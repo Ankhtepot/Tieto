@@ -54,10 +54,7 @@ namespace Cipherator
             SetAppOptionsCryptingMethod(1);
         }
 
-        private void BuDecipher_Click(object sender, EventArgs e)
-        {
-            Cipher(false);
-        }
+        private void BuDecipher_Click(object sender, EventArgs e) => Cipher(false);
 
         private void BuExit_Click(object sender, EventArgs e)
         {
@@ -71,16 +68,12 @@ namespace Cipherator
             }
         }
 
-        private void BuCipher_Click(object o, EventArgs e)
-        {
-            Cipher(true);
-        }
+        private void BuCipher_Click(object o, EventArgs e) => Cipher(true);
+        
 
         //executive methods
-        private void Cipher(Boolean cipherDirection)
-        {
+        private void Cipher(bool cipherDirection) =>
             TbResult.Text = OptionsService.CipherExecute(TbInput.Text, cipherDirection);
-        }
 
         private void SetAppOptionsCryptingMethod(int newValue)
         {
@@ -101,10 +94,7 @@ namespace Cipherator
             }
         }
 
-        private void SetKeyValue(int value)
-        {
-            Options.KeyValue = value;
-        }
+        private void SetKeyValue(int value) => Options.KeyValue = value;
 
         private void ResetTBs()
         {
@@ -116,11 +106,6 @@ namespace Cipherator
         {
             TbInput.Text = TbResult.Text;
             TbResult.Text = "";
-        }
-
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            string[,] testLoad = JSONToMorseTabParser.getMorseTabFromJSON("D:/Users/Petr/Documents/Visual Studio 2017/repos - docs/Tieto/Classes/Resources/Morse.json");
         }
     }
 }

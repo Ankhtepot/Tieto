@@ -1,4 +1,4 @@
-﻿namespace Cipher
+﻿namespace CryptingMethods
 { //base class for crypting methods with keyValue
     public abstract class CipherKeyBase : CipherBase
     {

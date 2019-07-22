@@ -1,7 +1,7 @@
 ﻿using Classes.Resources;
 using System.Collections.Generic;
 
-namespace Cipher
+namespace CryptingMethods
 {
     public class CipherMorse : CipherBase
     {
@@ -11,6 +11,11 @@ namespace Cipher
         private const string LINE_ENDING = "@/";
 
         private const string BASE_MORSE_JSON_TAB_FULL_PATH = "./Morse.json";
+
+        public CipherMorse()
+        {
+            
+        }
 
         private CipherMorse(string morseTableFullPath = "")
         {

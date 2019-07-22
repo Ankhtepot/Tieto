@@ -65,16 +65,16 @@
     <Compile Include="test\OptionsTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Classes\CryptingMethods.csproj">
-      <Project>{B55CDCC6-115B-4208-8DC2-A84B51CE3ED3}</Project>
-      <Name>CryptingMethods</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\xunit.analyzers.0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CryptingMethods\CryptingMethods.csproj">
+      <Project>{B55CDCC6-115B-4208-8DC2-A84B51CE3ED3}</Project>
+      <Name>CryptingMethods</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

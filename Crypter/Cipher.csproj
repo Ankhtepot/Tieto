@@ -115,13 +115,13 @@
     <None Include="Resources\crypt17x24.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Classes\CryptingMethods.csproj">
-      <Project>{B55CDCC6-115B-4208-8DC2-A84B51CE3ED3}</Project>
-      <Name>CryptingMethods</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Controls\AppOptions.csproj">
       <Project>{287c3875-e015-447a-83c0-b4064d2ab3aa}</Project>
       <Name>AppOptions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CryptingMethods\CryptingMethods.csproj">
+      <Project>{B55CDCC6-115B-4208-8DC2-A84B51CE3ED3}</Project>
+      <Name>CryptingMethods</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

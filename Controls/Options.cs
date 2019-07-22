@@ -1,6 +1,6 @@
-﻿using Cipher;
-using System;
-//Class with App settings
+﻿//Class with App settings
+using CryptingMethods;
+
 namespace AppOptions
 { //App options storage
     public static class Options

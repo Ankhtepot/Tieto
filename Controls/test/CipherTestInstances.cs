@@ -1,6 +1,7 @@
-﻿using Cipher;
+﻿using CryptingMethods;
+using AppOptions;
 
-namespace Tests
+namespace AppOptions.Tests
 {
     public class CipherTestInstances
     {

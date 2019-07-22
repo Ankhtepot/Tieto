@@ -32,7 +32,7 @@
             this.lbInput = new System.Windows.Forms.Label();
             this.LbResult = new System.Windows.Forms.Label();
             this.TbResult = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupCipher = new System.Windows.Forms.GroupBox();
             this.RbCaesar = new System.Windows.Forms.RadioButton();
             this.RbMorse = new System.Windows.Forms.RadioButton();
             this.NudKey = new System.Windows.Forms.NumericUpDown();
@@ -42,7 +42,7 @@
             this.BuExit = new System.Windows.Forms.Button();
             this.BuCipher = new System.Windows.Forms.Button();
             this.BuToInput = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.groupCipher.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NudKey)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,16 +78,16 @@
             this.TbResult.Size = new System.Drawing.Size(233, 20);
             this.TbResult.TabIndex = 4;
             // 
-            // groupBox1
+            // groupCipher
             // 
-            this.groupBox1.Controls.Add(this.RbCaesar);
-            this.groupBox1.Controls.Add(this.RbMorse);
-            this.groupBox1.Location = new System.Drawing.Point(12, 98);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(278, 86);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Crypting method";
+            this.groupCipher.Controls.Add(this.RbCaesar);
+            this.groupCipher.Controls.Add(this.RbMorse);
+            this.groupCipher.Location = new System.Drawing.Point(12, 98);
+            this.groupCipher.Name = "groupCipher";
+            this.groupCipher.Size = new System.Drawing.Size(278, 86);
+            this.groupCipher.TabIndex = 6;
+            this.groupCipher.TabStop = false;
+            this.groupCipher.Text = "Crypting method";
             // 
             // RbCaesar
             // 
@@ -97,7 +97,7 @@
             this.RbCaesar.Size = new System.Drawing.Size(58, 17);
             this.RbCaesar.TabIndex = 1;
             this.RbCaesar.TabStop = true;
-            this.RbCaesar.Tag = "2";
+            this.RbCaesar.Tag = "1";
             this.RbCaesar.Text = "Caesar";
             this.RbCaesar.UseVisualStyleBackColor = true;
             // 
@@ -109,7 +109,7 @@
             this.RbMorse.Size = new System.Drawing.Size(54, 17);
             this.RbMorse.TabIndex = 0;
             this.RbMorse.TabStop = true;
-            this.RbMorse.Tag = "1";
+            this.RbMorse.Tag = "0";
             this.RbMorse.Text = "Morse";
             this.RbMorse.UseVisualStyleBackColor = true;
             // 
@@ -209,7 +209,7 @@
             this.Controls.Add(this.NudKey);
             this.Controls.Add(this.BuDecipher);
             this.Controls.Add(this.BuExit);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupCipher);
             this.Controls.Add(this.TbResult);
             this.Controls.Add(this.LbResult);
             this.Controls.Add(this.BuCipher);
@@ -217,8 +217,8 @@
             this.Controls.Add(this.TbInput);
             this.Name = "FrMain";
             this.Text = "Cipher";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupCipher.ResumeLayout(false);
+            this.groupCipher.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NudKey)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -232,7 +232,7 @@
         private System.Windows.Forms.Button BuCipher;
         private System.Windows.Forms.Label LbResult;
         private System.Windows.Forms.TextBox TbResult;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupCipher;
         private System.Windows.Forms.RadioButton RbCaesar;
         private System.Windows.Forms.RadioButton RbMorse;
         private System.Windows.Forms.Button BuExit;

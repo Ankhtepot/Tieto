@@ -1,4 +1,4 @@
-﻿using Cipher;
+﻿using CryptingMethods;
 
 namespace Tests
 {
@@ -12,8 +12,9 @@ namespace Tests
         public const int TEST_MAX_KEY = 26;
         public const int TEST_KEY_VALUE = 5;
 
+
         public static CipherBase cipherWithoutKey = new TestCipherWithoutKey();
-        public static CipherKeyBase cipherWithKey = new TestCipherWithKey(
+        public static readonly CipherKeyBase cipherWithKey = new TestCipherWithKey(
                                                             TEST_MIN_KEY,
                                                             TEST_MAX_KEY,
                                                             TEST_KEY_VALUE);

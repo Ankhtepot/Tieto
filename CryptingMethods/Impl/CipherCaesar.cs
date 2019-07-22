@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Cipher
+namespace CryptingMethods
 {
     public class CipherCaesar : CipherKeyBase
     {

@@ -1,4 +1,4 @@
-﻿namespace Cipher
+﻿namespace CryptingMethods
 { //base class for crypting methods
     public abstract class CipherBase : ICipher
     {
@@ -9,6 +9,5 @@
         public abstract string Cipher(string text);
 
         public abstract bool IsKeyBasedCipher();
-        
     }
 }
