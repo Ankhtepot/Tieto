@@ -1,5 +1,6 @@
 ﻿using AppOptions;
 using CryptingMethods;
+using System;
 using Xunit;
 
 namespace AppOptions.Tests
@@ -67,7 +68,7 @@ namespace AppOptions.Tests
         [Fact]
         public void testGetCipher_withIndexOutOfRange()
         {
-            Assert.Null(OptionsService.GetCipher(int.MaxValue));
+            Assert.Throws<ArgumentOutOfRangeException>(() => OptionsService.GetCipher(int.MaxValue));
         }
 
         [Fact]

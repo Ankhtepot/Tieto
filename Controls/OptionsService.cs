@@ -74,12 +74,13 @@ namespace AppOptions
                 }
             }
 
-            switch (methodSelection)
-            {
-                case 0: return CipherMorse.Create();
-                case 1: return CipherCaesar.Create(Options.KeyValue > 0 ? Options.KeyValue : 1);
-                default: return null;
-            }
+            return cipherInstances[methodSelection];
+            //switch (methodSelection)
+            //{
+            //    case 0: return CipherMorse.Create();
+            //    case 1: return CipherCaesar.Create(Options.KeyValue > 0 ? Options.KeyValue : 1);
+            //    default: return null;
+            //}
         }
 
         //Serves as check if chosen crypting method supports keyValue

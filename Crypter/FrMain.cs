@@ -1,6 +1,8 @@
 ﻿using AppOptions;
 using Classes.Resources;
+using CryptingMethods;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Cipherator
@@ -11,6 +13,7 @@ namespace Cipherator
         {
             InitializeComponent();
 
+            //List<CipherBase> 
             //AppOptions default setting
             SetAppOptionsCryptingMethod(0);
 
@@ -29,32 +32,11 @@ namespace Cipherator
         }
 
         //placeholder controlls methods
-        private void BuToInput_Click(object sender, EventArgs e)
-        {
-            MoveResultToInput();
-        }
+        private void BuToInput_Click(object sender, EventArgs e) => MoveResultToInput();
 
-        private void BuReset_Click(object sender, EventArgs e)
-        {
-            ResetTBs();
-        }
+        private void BuReset_Click(object sender, EventArgs e) => ResetTBs();
 
-        private void NudKey_ValueChanged(object sender, EventArgs e)
-        {
-            SetKeyValue((int)NudKey.Value);
-        }
-
-        private void RbCaesar_Click(object sender, EventArgs e)
-        {
-            string extractedTag = ((sender as RadioButton).Tag).ToString();
-            SetAppOptionsCryptingMethod(int.TryParse(extractedTag, out int returnInt) ? int.Parse(extractedTag) : 0 );
-        }
-
-        private void RbMorse_Click(object sender, EventArgs e)
-        {
-            string extractedTag = ((sender as RadioButton).Tag).ToString();
-            SetAppOptionsCryptingMethod(int.TryParse(extractedTag, out int returnInt) ? int.Parse(extractedTag) : 0);
-        }
+        private void NudKey_ValueChanged(object sender, EventArgs e) => SetKeyValue((int)NudKey.Value);
 
         private void RbMethodClick(object sender, EventArgs e)
         {
