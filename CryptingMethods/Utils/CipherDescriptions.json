@@ -1,0 +1,16 @@
+  [
+    {
+      "Name": "CryptingMethods.Morse",
+      "ResourcePath": "",
+      "Key": 0,
+      "OptionalInt": 0,
+      "OptionalString": ""
+    },
+    {
+      "Name": "CryptingMethods.Caesar",
+      "ResourcePath": "",
+      "Key": 5,
+      "OptionalInt": 0,
+      "OptionalString": ""
+    }
+  ]

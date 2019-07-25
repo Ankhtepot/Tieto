@@ -7,17 +7,32 @@ namespace Classes.Resources
 {
     public class JSONParser
     {
-        public static string[,] getMorseTabFromJSON(string fileName)
+        public static string[,] getTranslationTabFromJSON(string fileName)
         {
-            List<Line> items = new List<Line>();
+            //using (StreamReader r = new StreamReader(fileName))
+            //{
+            //    string json = r.ReadToEnd();
+            //    return TransformListTo2DArray(JsonConvert.DeserializeObject<List<Line>>(json));
+            //}
+            return TransformListTo2DArray(parseJson<Line>(fileName));
+        }
 
+        public static List<T> parseJson<T>(string fileName)
+        {
             using (StreamReader r = new StreamReader(fileName))
             {
                 string json = r.ReadToEnd();
-                items = JsonConvert.DeserializeObject<List<Line>>(json);
+                return JsonConvert.DeserializeObject<List<T>>(json);
             }
+        }
 
-            return TransformListTo2DArray(items);
+        public static List<CipherDescription> getCipherList(string fileName)
+        {
+            using (StreamReader r = new StreamReader(fileName))
+            {
+                string json = r.ReadToEnd();
+                return JsonConvert.DeserializeObject<List<CipherDescription>>(json);
+            }
         }
 
         private static string[,] TransformListTo2DArray(List<Line> list)
@@ -28,15 +43,10 @@ namespace Classes.Resources
             {
                 result[i, 0] = list[i].primaryString;
                 result[i, 1] = list[i].secondaryString;
-                result[i, 2] = list[i].morseString;
+                result[i, 2] = list[i].translatedString;
             }
 
             return result;
-        }
-
-        public List<StoredCipher> getCipherList(string fullpath = "")
-        {
-            return null;
         }
     }
 
@@ -44,11 +54,15 @@ namespace Classes.Resources
     {
         public string primaryString;
         public string secondaryString;
-        public string morseString;
+        public string translatedString;
     }
 
-    public class StoredCipher
+    public class CipherDescription
     {
-        public string name;
+        public string Name;
+        public string ResourcePath;
+        public int Key;
+        public int OptionalInt;
+        public string OptionalString;
     }
 }

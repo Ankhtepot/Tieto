@@ -2,241 +2,241 @@
   {
     "primaryString": "A",
     "secondaryString": "a",
-    "morseString": ".-"
+    "translatedString": ".-"
   },
   {
     "primaryString": "B",
     "secondaryString": "b",
-    "morseString": "-..."
+    "translatedString": "-..."
   },
   {
     "primaryString": "C",
     "secondaryString": "c",
-    "morseString": "-.-."
+    "translatedString": "-.-."
   },
   {
     "primaryString": "D",
     "secondaryString": "d",
-    "morseString": "-.."
+    "translatedString": "-.."
   },
   {
     "primaryString": "E",
     "secondaryString": "e",
-    "morseString": "."
+    "translatedString": "."
   },
   {
     "primaryString": "F",
     "secondaryString": "f",
-    "morseString": "..-."
+    "translatedString": "..-."
   },
   {
     "primaryString": "G",
     "secondaryString": "g",
-    "morseString": "--."
+    "translatedString": "--."
   },
   {
     "primaryString": "H",
     "secondaryString": "h",
-    "morseString": "...."
+    "translatedString": "...."
   },
   {
     "primaryString": "CH",
     "secondaryString": "ch",
-    "morseString": "----"
+    "translatedString": "----"
   },
   {
     "primaryString": "I",
     "secondaryString": "i",
-    "morseString": ".."
+    "translatedString": ".."
   },
   {
     "primaryString": "J",
     "secondaryString": "j",
-    "morseString": ".---"
+    "translatedString": ".---"
   },
   {
     "primaryString": "K",
     "secondaryString": "k",
-    "morseString": "-.-"
+    "translatedString": "-.-"
   },
   {
     "primaryString": "L",
     "secondaryString": "l",
-    "morseString": ".-.."
+    "translatedString": ".-.."
   },
   {
     "primaryString": "M",
     "secondaryString": "m",
-    "morseString": "--"
+    "translatedString": "--"
   },
   {
     "primaryString": "N",
     "secondaryString": "n",
-    "morseString": "-."
+    "translatedString": "-."
   },
   {
     "primaryString": "O",
     "secondaryString": "o",
-    "morseString": "---"
+    "translatedString": "---"
   },
   {
     "primaryString": "P",
     "secondaryString": "p",
-    "morseString": ".--."
+    "translatedString": ".--."
   },
   {
     "primaryString": "Q",
     "secondaryString": "q",
-    "morseString": "--.-"
+    "translatedString": "--.-"
   },
   {
     "primaryString": "R",
     "secondaryString": "r",
-    "morseString": ".-."
+    "translatedString": ".-."
   },
   {
     "primaryString": "S",
     "secondaryString": "s",
-    "morseString": "..."
+    "translatedString": "..."
   },
   {
     "primaryString": "T",
     "secondaryString": "t",
-    "morseString": "-"
+    "translatedString": "-"
   },
   {
     "primaryString": "U",
     "secondaryString": "u",
-    "morseString": "..-"
+    "translatedString": "..-"
   },
   {
     "primaryString": "V",
     "secondaryString": "v",
-    "morseString": "...-"
+    "translatedString": "...-"
   },
   {
     "primaryString": "W",
     "secondaryString": "w",
-    "morseString": ".--"
+    "translatedString": ".--"
   },
   {
     "primaryString": "X",
     "secondaryString": "x",
-    "morseString": "-..-"
+    "translatedString": "-..-"
   },
   {
     "primaryString": "Y",
     "secondaryString": "y",
-    "morseString": "-.--"
+    "translatedString": "-.--"
   },
   {
     "primaryString": "Z",
     "secondaryString": "z",
-    "morseString": "--.."
+    "translatedString": "--.."
   },
   {
     "primaryString": "Ä",
     "secondaryString": "ä",
-    "morseString": ".-.-"
+    "translatedString": ".-.-"
   },
   {
     "primaryString": "Ö",
     "secondaryString": "ö",
-    "morseString": "---."
+    "translatedString": "---."
   },
   {
     "primaryString": "Ü",
     "secondaryString": "ü",
-    "morseString": "..--"
+    "translatedString": "..--"
   },
   {
     "primaryString": "1",
     "secondaryString": "1",
-    "morseString": ".----"
+    "translatedString": ".----"
   },
   {
     "primaryString": "2",
     "secondaryString": "2",
-    "morseString": "..---"
+    "translatedString": "..---"
   },
   {
     "primaryString": "3",
     "secondaryString": "3",
-    "morseString": "...--"
+    "translatedString": "...--"
   },
   {
     "primaryString": "4",
     "secondaryString": "4",
-    "morseString": "....-"
+    "translatedString": "....-"
   },
   {
     "primaryString": "5",
     "secondaryString": "5",
-    "morseString": "....."
+    "translatedString": "....."
   },
   {
     "primaryString": "6",
     "secondaryString": "6",
-    "morseString": "-...."
+    "translatedString": "-...."
   },
   {
     "primaryString": "7",
     "secondaryString": "7",
-    "morseString": "--..."
+    "translatedString": "--..."
   },
   {
     "primaryString": "8",
     "secondaryString": "8",
-    "morseString": "---.."
+    "translatedString": "---.."
   },
   {
     "primaryString": "9",
     "secondaryString": "9",
-    "morseString": "----."
+    "translatedString": "----."
   },
   {
     "primaryString": "0",
     "secondaryString": "0",
-    "morseString": "-----"
+    "translatedString": "-----"
   },
   {
     "primaryString": ".",
     "secondaryString": ".",
-    "morseString": ".-.-.-"
+    "translatedString": ".-.-.-"
   },
   {
     "primaryString": ",",
     "secondaryString": ",",
-    "morseString": "--..--"
+    "translatedString": "--..--"
   },
   {
     "primaryString": "?",
     "secondaryString": "?",
-    "morseString": "..--.."
+    "translatedString": "..--.."
   },
   {
     "primaryString": "!",
     "secondaryString": "!",
-    "morseString": "..--."
+    "translatedString": "..--."
   },
   {
     "primaryString": "\"",
     "secondaryString": "\"",
-    "morseString": ".-..-."
+    "translatedString": ".-..-."
   },
   {
     "primaryString": "'",
     "secondaryString": "'",
-    "morseString": ".----."
+    "translatedString": ".----."
   },
   {
     "primaryString": "=",
     "secondaryString": "=",
-    "morseString": "-...-"
+    "translatedString": "-...-"
   },
   {
     "primaryString": " ",
     "secondaryString": " ",
-    "morseString": " "
+    "translatedString": " "
   }
 ]

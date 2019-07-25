@@ -50,18 +50,21 @@ namespace AppOptions.Tests
         [Fact]
         public void testSetOptions_withNullMethod()
         {
+            OptionsService.InitializeOptionsCiphers();
             Assert.False(OptionsService.SetOptions(null));
         }
 
         [Fact]
         public void testGetCipher_morseCipher()
         {
+            OptionsService.InitializeOptionsCiphers();
             Assert.IsType<CipherMorse>(OptionsService.GetCipher(MORSE_ID));
         }
 
         [Fact]
         public void testGetCipher_caesarCipher()
         {
+            OptionsService.InitializeOptionsCiphers();
             Assert.IsType<CipherCaesar>(OptionsService.GetCipher(CAESAR_ID));
         }
 

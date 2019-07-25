@@ -74,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Utils\CipherDescriptions.json" />
     <None Include="Utils\Morse.json" />
   </ItemGroup>
   <ItemGroup>

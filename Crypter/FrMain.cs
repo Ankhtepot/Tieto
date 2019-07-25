@@ -16,6 +16,7 @@ namespace Cipherator
             //AppOptions default setting
             OptionsService.InitializeOptionsCiphers();
             SetAppOptionsCryptingMethod(0);
+            groupCipher.
 
             CreateRadioButtons(OptionsService.GetCiphersNames());
 
@@ -42,6 +43,7 @@ namespace Cipherator
             {
                 var newRB = new RadioButton();
 
+                newRB.Name = "RB" + i;
                 newRB.Checked = false;
                 newRB.Width = HBetweenRBs - 5;
                 newRB.Text = names[i];
