@@ -65,8 +65,7 @@
     <Compile Include="Abstracts\CipherKeyBase.cs" />
     <Compile Include="Impl\CipherMorse.cs" />
     <Compile Include="Abstracts\ICipher.cs" />
-    <Compile Include="Resources\JSONToMorseTabParser.cs" />
-    <Compile Include="Resources\MorseTab.cs" />
+    <Compile Include="Utils\JSONParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="test\CipherCaesarTest.cs" />
     <Compile Include="test\CipherKeyBaseTest.cs" />
@@ -75,7 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Resources\Morse.json" />
+    <None Include="Utils\Morse.json" />
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\xunit.analyzers.0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll" />

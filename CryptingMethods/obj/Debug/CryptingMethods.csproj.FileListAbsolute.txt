@@ -35,3 +35,4 @@ D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\CryptingMethods\ob
 D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\CryptingMethods\obj\Debug\CryptingMethods.csproj.CopyComplete
 D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\CryptingMethods\obj\Debug\CryptingMethods.dll
 D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\CryptingMethods\obj\Debug\CryptingMethods.pdb
+D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\CryptingMethods\obj\Debug\CryptingMethods.csprojAssemblyReference.cache

@@ -12,23 +12,56 @@ namespace Cipherator
         public FrMain()
         {
             InitializeComponent();
-
-            //List<CipherBase> 
+            
             //AppOptions default setting
+            OptionsService.InitializeOptionsCiphers();
             SetAppOptionsCryptingMethod(0);
 
+            CreateRadioButtons(OptionsService.GetCiphersNames());
+
             //settings of controlls
-            RbMorse.Checked = true;
 
             //Methods for controlls
             BuCipher.Click += BuCipher_Click;
             BuDecipher.Click += BuDecipher_Click;
             BuExit.Click += BuExit_Click;
-            RbMorse.Click += RbMethodClick;
-            RbCaesar.Click += RbMethodClick;
             NudKey.ValueChanged += NudKey_ValueChanged;
             BuReset.Click += BuReset_Click;
             BuToInput.Click += BuToInput_Click;
+        }
+
+        private void CreateRadioButtons(List<string> names)
+        {
+            var VBetweenRBs = Options.VBetweenRBs;
+            var HBetweenRBs = Options.HBetweenRBs;
+            var basicLeftOffset = Options.basicLeftOffset;
+            var basicTopOffset = Options.basicTopOffset;
+            var maxRbsOnLine = Options.maxRbsOnLine;
+
+            for (int i = 0; i < names.Count; i++)
+            {
+                var newRB = new RadioButton();
+
+                newRB.Checked = false;
+                newRB.Width = HBetweenRBs - 5;
+                newRB.Text = names[i];
+                newRB.Tag = i;
+                newRB.Left = ((i % maxRbsOnLine) * HBetweenRBs) + basicLeftOffset;
+                newRB.Top = ((i / maxRbsOnLine)) * VBetweenRBs + basicTopOffset;
+                newRB.MouseClick += RbMethodClick;
+
+                groupCipher.Controls.Add(newRB);
+            }
+        }
+
+        private void CreateRadioButtons(List<string> list, object names)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void InitializeRadioGroup()
+        {
+            //List<CipherBase> ciphers = Oprions.get
         }
 
         //placeholder controlls methods

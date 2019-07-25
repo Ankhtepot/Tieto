@@ -33,8 +33,6 @@
             this.LbResult = new System.Windows.Forms.Label();
             this.TbResult = new System.Windows.Forms.TextBox();
             this.groupCipher = new System.Windows.Forms.GroupBox();
-            this.RbCaesar = new System.Windows.Forms.RadioButton();
-            this.RbMorse = new System.Windows.Forms.RadioButton();
             this.NudKey = new System.Windows.Forms.NumericUpDown();
             this.LbKey = new System.Windows.Forms.Label();
             this.BuReset = new System.Windows.Forms.Button();
@@ -42,7 +40,6 @@
             this.BuExit = new System.Windows.Forms.Button();
             this.BuCipher = new System.Windows.Forms.Button();
             this.BuToInput = new System.Windows.Forms.Button();
-            this.groupCipher.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NudKey)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,38 +77,12 @@
             // 
             // groupCipher
             // 
-            this.groupCipher.Controls.Add(this.RbCaesar);
-            this.groupCipher.Controls.Add(this.RbMorse);
             this.groupCipher.Location = new System.Drawing.Point(12, 98);
             this.groupCipher.Name = "groupCipher";
             this.groupCipher.Size = new System.Drawing.Size(278, 86);
             this.groupCipher.TabIndex = 6;
             this.groupCipher.TabStop = false;
             this.groupCipher.Text = "Crypting method";
-            // 
-            // RbCaesar
-            // 
-            this.RbCaesar.AutoSize = true;
-            this.RbCaesar.Location = new System.Drawing.Point(7, 44);
-            this.RbCaesar.Name = "RbCaesar";
-            this.RbCaesar.Size = new System.Drawing.Size(58, 17);
-            this.RbCaesar.TabIndex = 1;
-            this.RbCaesar.TabStop = true;
-            this.RbCaesar.Tag = "1";
-            this.RbCaesar.Text = "Caesar";
-            this.RbCaesar.UseVisualStyleBackColor = true;
-            // 
-            // RbMorse
-            // 
-            this.RbMorse.AutoSize = true;
-            this.RbMorse.Location = new System.Drawing.Point(7, 20);
-            this.RbMorse.Name = "RbMorse";
-            this.RbMorse.Size = new System.Drawing.Size(54, 17);
-            this.RbMorse.TabIndex = 0;
-            this.RbMorse.TabStop = true;
-            this.RbMorse.Tag = "0";
-            this.RbMorse.Text = "Morse";
-            this.RbMorse.UseVisualStyleBackColor = true;
             // 
             // NudKey
             // 
@@ -217,8 +188,6 @@
             this.Controls.Add(this.TbInput);
             this.Name = "FrMain";
             this.Text = "Cipher";
-            this.groupCipher.ResumeLayout(false);
-            this.groupCipher.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NudKey)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -233,8 +202,6 @@
         private System.Windows.Forms.Label LbResult;
         private System.Windows.Forms.TextBox TbResult;
         private System.Windows.Forms.GroupBox groupCipher;
-        private System.Windows.Forms.RadioButton RbCaesar;
-        private System.Windows.Forms.RadioButton RbMorse;
         private System.Windows.Forms.Button BuExit;
         private System.Windows.Forms.Button BuDecipher;
         private System.Windows.Forms.NumericUpDown NudKey;

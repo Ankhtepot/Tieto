@@ -1,6 +1,7 @@
 ﻿using CryptingMethods;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace AppOptions
@@ -14,11 +15,20 @@ namespace AppOptions
         public static string CipherExecute(string input, bool cipherDirection) =>
              cipherDirection ? Options.CryptingMethod.Cipher(input) : Options.CryptingMethod.DeCipher(input);
 
-
         //just demonstration of possibility to check if all is ready to Exit app
         public static bool ExitCheck()
         {
             return true;
+        }
+
+        public static void InitializeOptionsCiphers()
+        {
+            Options.Ciphers = loadCiphers(null);
+        }
+
+        public static List<string> GetCiphersNames()
+        {
+            return Options.Ciphers.Select(x => x.Name).ToList();
         }
 
         //sets AppOptions when crypting method changes
@@ -49,21 +59,21 @@ namespace AppOptions
             return true;
         }
 
-        //for getting cipher method
-        public static CipherBase GetCipher(int methodSelection)
+        public static List<CipherBase> loadCiphers(List<string> ciphers )
         {
-            string assemblyName = System.Reflection.Assembly.GetExecutingAssembly().FullName;
-
-            List<Type> cipherTypes = new List<Type> {
-                GetType("CryptingMethods.CipherMorse"), GetType("CryptingMethods.CipherCaesar") };
-
+            // this list will be got from ciphers argument filled from JSON
+            List<string> ciphersTemp = new List<string> {
+                "CryptingMethods.CipherMorse",
+                "CryptingMethods.CipherCaesar",
+                "CryptingMethods.CipherMorse",
+                "CryptingMethods.CipherCaesar",
+                "CryptingMethods.CipherMorse",
+                "CryptingMethods.CipherCaesar"};
             List<CipherBase> cipherInstances = new List<CipherBase>();
 
-            Type keyCipher = typeof(CipherKeyBase);
-
-            foreach (var cipherType in cipherTypes)
-            {
-                if (cipherType.IsSubclassOf(keyCipher))
+            ciphersTemp.ForEach(stringType => {
+                var cipherType = GetType(stringType);
+                if (cipherType.IsSubclassOf(typeof(CipherKeyBase)))
                 {
                     var instance = cipherType.GetMethod("Create").Invoke(cipherType, new object[] { 1 });
                     cipherInstances.Add((CipherKeyBase)instance);
@@ -72,9 +82,36 @@ namespace AppOptions
                 {
                     cipherInstances.Add((CipherBase)cipherType.GetMethod("Create").Invoke(cipherType, new object[] { "" }));
                 }
-            }
+            });
 
-            return cipherInstances[methodSelection];
+            return cipherInstances;
+        }
+
+        //for getting cipher method
+        public static CipherBase GetCipher(int methodSelection)
+        {
+            //List<Type> cipherTypes = new List<Type> {
+            //    GetType("CryptingMethods.CipherMorse"), GetType("CryptingMethods.CipherCaesar") };
+
+            //List<CipherBase> cipherInstances = new List<CipherBase>();
+
+            //Type keyCipher = typeof(CipherKeyBase);
+
+            //foreach (var cipherType in cipherTypes)
+            //{
+            //    if (cipherType.IsSubclassOf(keyCipher))
+            //    {
+            //        var instance = cipherType.GetMethod("Create").Invoke(cipherType, new object[] { 1 });
+            //        cipherInstances.Add((CipherKeyBase)instance);
+            //    }
+            //    else
+            //    {
+            //        cipherInstances.Add((CipherBase)cipherType.GetMethod("Create").Invoke(cipherType, new object[] { "" }));
+            //    }
+            //}
+
+
+            return loadCiphers(null)[methodSelection];
             //switch (methodSelection)
             //{
             //    case 0: return CipherMorse.Create();

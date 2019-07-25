@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Classes.Resources
 {
-    public class JSONToMorseTabParser
+    public class JSONParser
     {
         public static string[,] getMorseTabFromJSON(string fileName)
         {
@@ -33,6 +33,11 @@ namespace Classes.Resources
 
             return result;
         }
+
+        public List<StoredCipher> getCipherList(string fullpath = "")
+        {
+            return null;
+        }
     }
 
     public class Line
@@ -40,5 +45,10 @@ namespace Classes.Resources
         public string primaryString;
         public string secondaryString;
         public string morseString;
+    }
+
+    public class StoredCipher
+    {
+        public string name;
     }
 }
