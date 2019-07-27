@@ -36,7 +36,7 @@ namespace CryptingMethods
 
         private void loadMorseTableFromJSON(string fileFullPath)
         {
-            codeTable = JSONParser.getTranslationTabFromJSON(fileFullPath);
+            codeTable = JSONParser.GetTranslationTabFromJSON(fileFullPath);
         }
 
         public override string Cipher(string text)

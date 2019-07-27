@@ -8,7 +8,7 @@ namespace Tests
         CipherMorse testCipherMorse = CipherMorse.Create();
 
         [Fact]
-        public void CreateTest()
+        public void testCreate()
         {
             Assert.IsType<CipherMorse>(testCipherMorse);
         }

@@ -25,7 +25,7 @@ namespace AppOptions
             set 
             {
                 if (CryptingMethod is CipherKeyBase 
-                    && value >= ((CipherKeyBase)CryptingMethod).KeyMinConstraint
+                    && value >= ((CipherKeyBase)CryptingMethod).KeyMinConstraint 
                     && value <= ((CipherKeyBase)CryptingMethod).KeyMaxConstraint)
                 {
                     ((CipherKeyBase)CryptingMethod).KeyValue = value;

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using CryptingMethods.Utils;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -6,36 +7,46 @@ using System.Linq;
 namespace Classes.Resources
 {
     public class JSONParser
-    {
-        public static string[,] getTranslationTabFromJSON(string fileName)
+    {      
+        /// <summary>
+        /// Generic method to parse JSON file.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
+        public static List<T> ParseJson<T>(string fileName)
         {
-            //using (StreamReader r = new StreamReader(fileName))
-            //{
-            //    string json = r.ReadToEnd();
-            //    return TransformListTo2DArray(JsonConvert.DeserializeObject<List<Line>>(json));
-            //}
-            return TransformListTo2DArray(parseJson<Line>(fileName));
-        }
+            if(!File.Exists(fileName))
+            {
+                return null;
+            }
 
-        public static List<T> parseJson<T>(string fileName)
-        {
             using (StreamReader r = new StreamReader(fileName))
             {
-                string json = r.ReadToEnd();
-                return JsonConvert.DeserializeObject<List<T>>(json);
+                try
+                {
+                    string json = r.ReadToEnd();
+                    return JsonConvert.DeserializeObject<List<T>>(json);
+                }
+                catch (System.Exception e)
+                {
+                    return null;
+                }
+                
             }
         }
 
-        public static List<CipherDescription> getCipherList(string fileName)
+        public static string[,] GetTranslationTabFromJSON(string fileName)
         {
-            using (StreamReader r = new StreamReader(fileName))
-            {
-                string json = r.ReadToEnd();
-                return JsonConvert.DeserializeObject<List<CipherDescription>>(json);
-            }
+            return TransformListTo2DArray(ParseJson<TranslationTabLine>(fileName));
         }
 
-        private static string[,] TransformListTo2DArray(List<Line> list)
+        /// <summary>
+        /// Transforms TranslationTabLines into 2D array usable in ciphers
+        /// </summary>
+        /// <param name="list">list of TranslationTabLines f.ex. extracted from json</param>
+        /// <returns></returns>
+        private static string[,] TransformListTo2DArray(List<TranslationTabLine> list)
         {
             string[,] result = new string[list.Count(), 3];
 
@@ -48,21 +59,5 @@ namespace Classes.Resources
 
             return result;
         }
-    }
-
-    public class Line
-    {
-        public string primaryString;
-        public string secondaryString;
-        public string translatedString;
-    }
-
-    public class CipherDescription
-    {
-        public string Name;
-        public string ResourcePath;
-        public int Key;
-        public int OptionalInt;
-        public string OptionalString;
     }
 }

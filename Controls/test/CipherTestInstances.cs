@@ -5,6 +5,8 @@ namespace AppOptions.Tests
 {
     public class CipherTestInstances
     {
+        public const string CIPHER_NAME_CAESAR = "Caesar";
+        public const string CIPHER_NAME_MORSE = "Morse";
         public const string TEST_CIPHER_WITH_KEY = "TestCipherWithKey - cipher";
         public const string TEST_DECIPHER_WITH_KEY = "TestCipherWithKey - decipher";
         public const string TEST_CIPHER_WITHOUT_KEY = "TestCipherWithoutKey - cipher";

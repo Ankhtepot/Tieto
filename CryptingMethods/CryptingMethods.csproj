@@ -65,12 +65,15 @@
     <Compile Include="Abstracts\CipherKeyBase.cs" />
     <Compile Include="Impl\CipherMorse.cs" />
     <Compile Include="Abstracts\ICipher.cs" />
+    <Compile Include="test\JSONParserTest.cs" />
+    <Compile Include="Utils\CipherDescription.cs" />
     <Compile Include="Utils\JSONParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="test\CipherCaesarTest.cs" />
     <Compile Include="test\CipherKeyBaseTest.cs" />
     <Compile Include="test\CipherMorseTest.cs" />
     <Compile Include="test\CipherTestInstances.cs" />
+    <Compile Include="Utils\TranslationTabLine.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -107,9 +107,9 @@
             this.LbKey.AutoSize = true;
             this.LbKey.Location = new System.Drawing.Point(12, 192);
             this.LbKey.Name = "LbKey";
-            this.LbKey.Size = new System.Drawing.Size(61, 13);
+            this.LbKey.Size = new System.Drawing.Size(151, 13);
             this.LbKey.TabIndex = 10;
-            this.LbKey.Text = "Cipher Key:";
+            this.LbKey.Text = "Select crypting method above:";
             // 
             // BuReset
             // 

@@ -2,15 +2,11 @@
   {
     "Name": "CryptingMethods.CipherMorse",
     "ResourcePath": "",
-    "Key": 0,
-    "OptionalInt": 0,
-    "OptionalString": ""
+    "Key": 0
   },
   {
     "Name": "CryptingMethods.CipherCaesar",
     "ResourcePath": "",
-    "Key": 5,
-    "OptionalInt": 0,
-    "OptionalString": ""
+    "Key": 5
   }
 ]

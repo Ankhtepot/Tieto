@@ -1,6 +1,7 @@
 ﻿using AppOptions;
 using CryptingMethods;
 using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace AppOptions.Tests
@@ -11,9 +12,62 @@ namespace AppOptions.Tests
         private const int CAESAR_ID = 1;
 
         [Fact]
+        public void testCipherExecute_directionToCipherSomething()
+        {
+            OptionsService.SetOptions(CipherTestInstances.cipherWithoutKey);
+
+            Assert.Equal(CipherTestInstances.TEST_CIPHER_WITHOUT_KEY, OptionsService.CipherExecute("whatever", true));
+        }
+
+        [Fact]
+        public void testCipherExecute_directionToDecipherSomething()
+        {
+            OptionsService.SetOptions(CipherTestInstances.cipherWithKey);
+
+            Assert.Equal(CipherTestInstances.TEST_DECIPHER_WITH_KEY, OptionsService.CipherExecute("whatever", false));
+        }
+
+        [Fact]
         public void testExitCheck()
         {
             Assert.True(OptionsService.ExitCheck());
+        }
+
+        [Fact]
+        public void testInitializeOptionsCiphers_withDefaultFilePath()
+        {
+            OptionsService.InitializeOptionsCiphers();
+
+            Assert.NotNull(Options.Ciphers);
+            Assert.NotEmpty(Options.Ciphers);
+        }
+
+        [Fact]
+        public void testInitializeOptionsCiphers_withWrongPath()
+        {
+            OptionsService.InitializeOptionsCiphers("./NonExistent.json");
+
+            Assert.Null(Options.Ciphers);
+        }
+
+        [Fact]
+        public void testGetCipherNames_withValidData()
+        {
+            OptionsService.InitializeOptionsCiphers();
+
+            Assert.Equal(OptionsService.GetCiphersNames(), new List<string> { CipherTestInstances.CIPHER_NAME_MORSE, CipherTestInstances.CIPHER_NAME_CAESAR });
+        }
+
+        [Fact]
+        public void testGetCipherNames_withNullAndEmptyListListData()
+        {
+            Options.Ciphers = null;
+
+            Assert.Null(OptionsService.GetCiphersNames());
+
+            Options.Ciphers = new List<CipherBase>();
+
+            Assert.Null(OptionsService.GetCiphersNames());
         }
 
         [Fact]

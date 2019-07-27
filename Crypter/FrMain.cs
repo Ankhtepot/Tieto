@@ -16,9 +16,9 @@ namespace Cipherator
             //AppOptions default setting
             OptionsService.InitializeOptionsCiphers();
             SetAppOptionsCryptingMethod(0);
-            groupCipher.
 
             CreateRadioButtons(OptionsService.GetCiphersNames());
+            //Console.WriteLine((groupCipher.Controls.Find("RB0", false)[0] as CheckBox).Checked);// = true;
 
             //settings of controlls
 
@@ -51,6 +51,7 @@ namespace Cipherator
                 newRB.Left = ((i % maxRbsOnLine) * HBetweenRBs) + basicLeftOffset;
                 newRB.Top = ((i / maxRbsOnLine)) * VBetweenRBs + basicTopOffset;
                 newRB.MouseClick += RbMethodClick;
+                if (i == 0) newRB.Checked = true; // sets first created radioButton checked
 
                 groupCipher.Controls.Add(newRB);
             }
