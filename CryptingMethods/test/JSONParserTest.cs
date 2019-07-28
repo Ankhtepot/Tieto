@@ -28,10 +28,30 @@ namespace CryptingMethods.test
             }
         };
 
+        private String[,] testTranslationTabArray = { { "PS1", "SS1", "TS1" }, { "PS2", "SS2", "TS2" } };
+
         [Fact]
         public void testParseJson_withValidFile()
         {
             Assert.Equal(testTranslationTabList, JSONParser.ParseJson<TranslationTabLine>(TEST_TAB_FILEPATH));
+        }
+
+        [Fact]
+        public void testParseJson_withFictionalFile()
+        {
+            Assert.Null(JSONParser.ParseJson<TranslationTabLine>("nonExistantFile.wtf"));
+        }
+
+        [Fact]
+        public void testGetTranslationTabFromJSON_withValidFile()
+        {
+            Assert.Equal(testTranslationTabArray, JSONParser.GetTranslationTabFromJSON(TEST_TAB_FILEPATH));
+        }
+
+        [Fact]
+        public void testGetTranslationTabFromJSON_withFictionalFile()
+        {
+            Assert.Null(JSONParser.GetTranslationTabFromJSON("moveAlongNothingToFindHere.pig"));
         }
     }
 }

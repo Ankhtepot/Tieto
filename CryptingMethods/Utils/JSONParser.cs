@@ -48,6 +48,11 @@ namespace Classes.Resources
         /// <returns></returns>
         private static string[,] TransformListTo2DArray(List<TranslationTabLine> list)
         {
+            if(list == null || !list.Any())
+            {
+                return null;
+            }
+
             string[,] result = new string[list.Count(), 3];
 
             for (int i = 0; i < list.Count; i++)
