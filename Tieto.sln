@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppOptions", "Controls\AppO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptingMethods", "CryptingMethods\CryptingMethods.csproj", "{B55CDCC6-115B-4208-8DC2-A84B51CE3ED3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFCipher", "WPFCipher\WPFCipher.csproj", "{51C5CBFE-8288-49E8-BD87-602B6F8ACC54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{B55CDCC6-115B-4208-8DC2-A84B51CE3ED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B55CDCC6-115B-4208-8DC2-A84B51CE3ED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B55CDCC6-115B-4208-8DC2-A84B51CE3ED3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51C5CBFE-8288-49E8-BD87-602B6F8ACC54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51C5CBFE-8288-49E8-BD87-602B6F8ACC54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51C5CBFE-8288-49E8-BD87-602B6F8ACC54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51C5CBFE-8288-49E8-BD87-602B6F8ACC54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
