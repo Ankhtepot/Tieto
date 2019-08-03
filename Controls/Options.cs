@@ -20,6 +20,9 @@ namespace AppOptions
         public static int basicLeftOffset = 5;
         public static int basicTopOffset = 12;
         public static int maxRbsOnLine = 4;
+
+        public static int CellHeightForWPF = 15;
+        public static int MainWindowBaseHeightWPF = 280;
         public static int KeyValue {
             get => keyValue;
             set 

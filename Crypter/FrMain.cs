@@ -57,16 +57,6 @@ namespace Cipherator
             }
         }
 
-        private void CreateRadioButtons(List<string> list, object names)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void InitializeRadioGroup()
-        {
-            //List<CipherBase> ciphers = Oprions.get
-        }
-
         //placeholder controlls methods
         private void BuToInput_Click(object sender, EventArgs e) => MoveResultToInput();
 

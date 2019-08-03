@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{51C5CBFE-8288-49E8-BD87-602B6F8ACC54}</ProjectGuid>
+    <ProjectGuid>{F3BB715E-F11C-4C15-83F2-6B44D6EE8E43}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>WPFCipher</RootNamespace>
     <AssemblyName>WPFCipher</AssemblyName>
@@ -71,7 +71,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="WPFCipher.xaml">
+    <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -79,8 +79,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="WPFCipher.xaml.cs">
-      <DependentUpon>WPFCipher.xaml</DependentUpon>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -99,7 +99,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
+      <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -119,6 +119,16 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\exit24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controls\AppOptions.csproj">
+      <Project>{287C3875-E015-447A-83C0-B4064D2AB3AA}</Project>
+      <Name>AppOptions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CryptingMethods\CryptingMethods.csproj">
+      <Project>{B55CDCC6-115B-4208-8DC2-A84B51CE3ED3}</Project>
+      <Name>CryptingMethods</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

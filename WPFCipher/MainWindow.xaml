@@ -1,4 +1,4 @@
-﻿<Window x:Class="WPFCipher.WPFCipher"
+﻿<Window x:Class="WPFCipher.FrMain"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,14 +6,14 @@
         xmlns:local="clr-namespace:WPFCipher"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
-        Title="Cryptonator" Height="500" Width="307.855">
+        Title="Cryptonator"  Width="308" Height="280" x:Name="FrMainWindow">
     <Border BorderThickness="2" Margin="5 5 5 5">
         <StackPanel Margin="0,0,0,0">
             <StackPanel>
                 <TextBlock Text="Input:" FontWeight="Bold" FontSize="16" Margin="15 0 15 0"/>
                 <TextBox x:Name="TbInput" Padding="5" Margin="5 0 5 0"></TextBox>
             </StackPanel>
-            
+
             <!-- Cipher - Decipher Buttons -->
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -55,37 +55,31 @@
 
             <!-- groupCipher -->
             <Border BorderThickness="2" Margin="5 0 5 10">
-                <StackPanel  HorizontalAlignment="Stretch">
-                    <GroupBox x:Name="groupCipher" Header="Crypting methods" HorizontalAlignment="Stretch" BorderBrush="Black" Height="50">
-
-                    </GroupBox>
-                </StackPanel>
+                <GroupBox  Header="Crypting methods" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Black" >
+                    <Grid  x:Name="GroupCipher" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                </GroupBox>
             </Border>
             <!-- end of groupCipher -->
 
             <!-- Key select and BuReset -->
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
 
                 <!-- Key select area -->
-                <Grid Grid.Column="0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="4*"/>
-                        <ColumnDefinition Width="1*"/>
-                    </Grid.ColumnDefinitions>
-
+                <!--<StackPanel Grid.Column="0" Margin="5 0 5 0">-->
                     <!-- LbKey -->
-                    <TextBlock x:Name="LbKey" Grid.Column="0" Text="Select crypting method above:" Margin="5 0 1 0"/>
+                    <TextBlock x:Name="LbKey" Grid.Column="0" Text="Select crypting method above:" Margin="5 0 1 0" FontSize="10" TextWrapping="Wrap"/>
                     <!-- NudKey -->
-                    <xctk:IntegerUpDown x:Name="NudKey" Grid.Column="1" Visibility="Hidden"/>
-                </Grid>
+                    <xctk:IntegerUpDown x:Name="NudKey" Grid.Column="1" Visibility="Hidden" HorizontalAlignment="Right"/>
+                <!--</StackPanel>-->
                 <!-- end of Key select area -->
-                
+
                 <!-- BuReset -->
-                <StackPanel Grid.Column="1">
+                <StackPanel Grid.Column="2">
                     <Button x:Name="BuReset"  Margin="7 0 5 0">
                         <StackPanel>
                             <TextBlock Text="Reset" FontWeight="Bold"/>
@@ -94,14 +88,14 @@
                 </StackPanel>
             </Grid>
             <!-- end of Key select and BuReset -->
-            
+
             <!-- TbResult and BuToInput area -->
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="4*"/>
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
-                
+
                 <!-- TbResult -->
                 <StackPanel Grid.Column="0" Margin="5 0 0 0">
                     <TextBlock Text="Result:"/>
@@ -116,6 +110,22 @@
                 </StackPanel>
             </Grid>
             <!-- end of TbResult and BuToInput area -->
+
+            <!-- BuExit -->
+            <StackPanel Margin="5 5 5 0">
+                <Button x:Name="BuExit" Click="BuExit_Click" >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Grid.Column="0" Source="D:\Users\Petr\Documents\Visual Studio 2017\repos - docs\Tieto\WPFCipher\Resources\exit24x24.png" Height="24" Width="24"/>
+                        <TextBlock Grid.Column="1" Text="Exit" FontWeight="Bold" FontSize="20" Margin="10 0 0 0"/>
+                    </Grid>
+                </Button>
+            </StackPanel>
+            <!-- end of BuExit -->
         </StackPanel>
     </Border>
 </Window>

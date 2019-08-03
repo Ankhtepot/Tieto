@@ -1,0 +1,242 @@
+[
+  {
+    "primaryString": "A",
+    "secondaryString": "a",
+    "translatedString": ".-"
+  },
+  {
+    "primaryString": "B",
+    "secondaryString": "b",
+    "translatedString": "-..."
+  },
+  {
+    "primaryString": "C",
+    "secondaryString": "c",
+    "translatedString": "-.-."
+  },
+  {
+    "primaryString": "D",
+    "secondaryString": "d",
+    "translatedString": "-.."
+  },
+  {
+    "primaryString": "E",
+    "secondaryString": "e",
+    "translatedString": "."
+  },
+  {
+    "primaryString": "F",
+    "secondaryString": "f",
+    "translatedString": "..-."
+  },
+  {
+    "primaryString": "G",
+    "secondaryString": "g",
+    "translatedString": "--."
+  },
+  {
+    "primaryString": "H",
+    "secondaryString": "h",
+    "translatedString": "...."
+  },
+  {
+    "primaryString": "CH",
+    "secondaryString": "ch",
+    "translatedString": "----"
+  },
+  {
+    "primaryString": "I",
+    "secondaryString": "i",
+    "translatedString": ".."
+  },
+  {
+    "primaryString": "J",
+    "secondaryString": "j",
+    "translatedString": ".---"
+  },
+  {
+    "primaryString": "K",
+    "secondaryString": "k",
+    "translatedString": "-.-"
+  },
+  {
+    "primaryString": "L",
+    "secondaryString": "l",
+    "translatedString": ".-.."
+  },
+  {
+    "primaryString": "M",
+    "secondaryString": "m",
+    "translatedString": "--"
+  },
+  {
+    "primaryString": "N",
+    "secondaryString": "n",
+    "translatedString": "-."
+  },
+  {
+    "primaryString": "O",
+    "secondaryString": "o",
+    "translatedString": "---"
+  },
+  {
+    "primaryString": "P",
+    "secondaryString": "p",
+    "translatedString": ".--."
+  },
+  {
+    "primaryString": "Q",
+    "secondaryString": "q",
+    "translatedString": "--.-"
+  },
+  {
+    "primaryString": "R",
+    "secondaryString": "r",
+    "translatedString": ".-."
+  },
+  {
+    "primaryString": "S",
+    "secondaryString": "s",
+    "translatedString": "..."
+  },
+  {
+    "primaryString": "T",
+    "secondaryString": "t",
+    "translatedString": "-"
+  },
+  {
+    "primaryString": "U",
+    "secondaryString": "u",
+    "translatedString": "..-"
+  },
+  {
+    "primaryString": "V",
+    "secondaryString": "v",
+    "translatedString": "...-"
+  },
+  {
+    "primaryString": "W",
+    "secondaryString": "w",
+    "translatedString": ".--"
+  },
+  {
+    "primaryString": "X",
+    "secondaryString": "x",
+    "translatedString": "-..-"
+  },
+  {
+    "primaryString": "Y",
+    "secondaryString": "y",
+    "translatedString": "-.--"
+  },
+  {
+    "primaryString": "Z",
+    "secondaryString": "z",
+    "translatedString": "--.."
+  },
+  {
+    "primaryString": "Ä",
+    "secondaryString": "ä",
+    "translatedString": ".-.-"
+  },
+  {
+    "primaryString": "Ö",
+    "secondaryString": "ö",
+    "translatedString": "---."
+  },
+  {
+    "primaryString": "Ü",
+    "secondaryString": "ü",
+    "translatedString": "..--"
+  },
+  {
+    "primaryString": "1",
+    "secondaryString": "1",
+    "translatedString": ".----"
+  },
+  {
+    "primaryString": "2",
+    "secondaryString": "2",
+    "translatedString": "..---"
+  },
+  {
+    "primaryString": "3",
+    "secondaryString": "3",
+    "translatedString": "...--"
+  },
+  {
+    "primaryString": "4",
+    "secondaryString": "4",
+    "translatedString": "....-"
+  },
+  {
+    "primaryString": "5",
+    "secondaryString": "5",
+    "translatedString": "....."
+  },
+  {
+    "primaryString": "6",
+    "secondaryString": "6",
+    "translatedString": "-...."
+  },
+  {
+    "primaryString": "7",
+    "secondaryString": "7",
+    "translatedString": "--..."
+  },
+  {
+    "primaryString": "8",
+    "secondaryString": "8",
+    "translatedString": "---.."
+  },
+  {
+    "primaryString": "9",
+    "secondaryString": "9",
+    "translatedString": "----."
+  },
+  {
+    "primaryString": "0",
+    "secondaryString": "0",
+    "translatedString": "-----"
+  },
+  {
+    "primaryString": ".",
+    "secondaryString": ".",
+    "translatedString": ".-.-.-"
+  },
+  {
+    "primaryString": ",",
+    "secondaryString": ",",
+    "translatedString": "--..--"
+  },
+  {
+    "primaryString": "?",
+    "secondaryString": "?",
+    "translatedString": "..--.."
+  },
+  {
+    "primaryString": "!",
+    "secondaryString": "!",
+    "translatedString": "..--."
+  },
+  {
+    "primaryString": "\"",
+    "secondaryString": "\"",
+    "translatedString": ".-..-."
+  },
+  {
+    "primaryString": "'",
+    "secondaryString": "'",
+    "translatedString": ".----."
+  },
+  {
+    "primaryString": "=",
+    "secondaryString": "=",
+    "translatedString": "-...-"
+  },
+  {
+    "primaryString": " ",
+    "secondaryString": " ",
+    "translatedString": " "
+  }
+]

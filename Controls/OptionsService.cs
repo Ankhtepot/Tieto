@@ -91,15 +91,21 @@ namespace AppOptions
         /// <returns>Cipher</returns>
         public static CipherBase GetCipher(int methodSelection)
         {
-            return Options.Ciphers[methodSelection];
+            return Options.Ciphers != null ? Options.Ciphers[methodSelection] : null;
         }
 
         /// <summary>
         /// Serves as check if chosen crypting method supports keyValue
         /// </summary>
         /// <returns></returns>
-        public static bool IsCryptingMethodWithKey() =>
-            Options.CryptingMethod.IsKeyBasedCipher();
+        public static bool IsCryptingMethodWithKey()
+        {
+            if(Options.CryptingMethod == null)
+            {
+                return false;
+            }
+            return Options.CryptingMethod.IsKeyBasedCipher(); 
+        }
 
         private static string buildLbKeyText(CipherBase cipher)
         {
