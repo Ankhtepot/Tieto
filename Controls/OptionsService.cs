@@ -100,11 +100,7 @@ namespace AppOptions
         /// <returns></returns>
         public static bool IsCryptingMethodWithKey()
         {
-            if(Options.CryptingMethod == null)
-            {
-                return false;
-            }
-            return Options.CryptingMethod.IsKeyBasedCipher(); 
+            return Options.CryptingMethod?.IsKeyBasedCipher() ?? false; 
         }
 
         private static string buildLbKeyText(CipherBase cipher)
